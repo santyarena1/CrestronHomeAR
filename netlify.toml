@@ -1,0 +1,68 @@
+[build]
+  publish = "crestron-home-es"
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/iluminacion"
+  to = "/iluminacion.html"
+  status = 200
+
+[[redirects]]
+  from = "/persianas"
+  to = "/persianas.html"
+  status = 200
+
+[[redirects]]
+  from = "/termostatos"
+  to = "/termostatos.html"
+  status = 200
+
+[[redirects]]
+  from = "/acceso-hogar"
+  to = "/acceso-hogar.html"
+  status = 200
+
+[[redirects]]
+  from = "/audio"
+  to = "/audio.html"
+  status = 200
+
+[[redirects]]
+  from = "/video"
+  to = "/video.html"
+  status = 200
+
+[[redirects]]
+  from = "/controladores"
+  to = "/controladores.html"
+  status = 200
+
+[[redirects]]
+  from = "/piscina-spa"
+  to = "/piscina-spa.html"
+  status = 200
+
+[[redirects]]
+  from = "/salud-bienestar"
+  to = "/salud-bienestar.html"
+  status = 200
+
+[[redirects]]
+  from = "/todo-lo-demas"
+  to = "/todo-lo-demas.html"
+  status = 200
+
+[[redirects]]
+  from = "/horizon"
+  to = "/horizon.html"
+  status = 200
+
+[[redirects]]
+  from = "/cameo"
+  to = "/cameo.html"
+  status = 200
