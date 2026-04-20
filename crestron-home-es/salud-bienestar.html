@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salud y Bienestar — Crestron Home®</title>
+  <meta name="description" content="Crestron Home para salud y bienestar. Iluminación circadiana, calidad del aire, ambientes de meditación y rutinas de bienestar automatizadas.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-left">
+    <button class="menu-btn" onclick="openMenu()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="6" width="6" height="6"/><rect x="11" y="6" width="6" height="6"/>
+        <rect x="3" y="14" width="6" height="6"/><rect x="11" y="14" width="6" height="6"/>
+      </svg>
+      MENÚ
+    </button>
+    <a href="index.html" class="logo">CRESTRON <span>HOME</span>®</a>
+  </div>
+  <div class="navbar-right">
+    <a href="#">Blog</a><a href="#">Ayuda</a>
+    <button class="btn-download" onclick="window.open('https://apps.apple.com/us/app/crestron-home/id1466827669')">Descargar App</button>
+  </div>
+</nav>
+
+<div class="mega-menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+<div class="mega-menu" id="megaMenu">
+  <button class="menu-close" onclick="closeMenu()">✕</button>
+  <div class="menu-section"><h4>Experiencia</h4><ul>
+    <li><a href="index.html">Crestron Home OS</a></li>
+    <li><a href="controladores.html">Tú Tienes el Control</a></li>
+  </ul></div>
+  <div class="menu-section"><h4>Productos</h4><ul>
+    <li><a href="iluminacion.html">Iluminación</a></li>
+    <li><a href="persianas.html">Persianas y Estores</a></li>
+    <li><a href="termostatos.html">Termostatos</a></li>
+    <li><a href="acceso-hogar.html">Acceso al Hogar</a></li>
+    <li><a href="audio.html">Audio</a></li>
+    <li><a href="video.html">Video</a></li>
+    <li><a href="controladores.html">Controladores</a></li>
+    <li><a href="piscina-spa.html">Piscina y Spa</a></li>
+    <li><a href="salud-bienestar.html">Salud y Bienestar</a></li>
+    <li><a href="todo-lo-demas.html">Todo lo Demás</a></li>
+  </ul></div>
+</div>
+
+<nav class="page-breadcrumb" aria-label="Migas de pan">
+  <a href="index.html">Inicio</a>
+  <span aria-hidden="true">/</span>
+  <span>Salud y Bienestar</span>
+</nav>
+
+<!-- HERO -->
+<section class="hero-split">
+  <div class="hero-left">
+    <p class="supertitle">Crestron Home® — Salud y Bienestar</p>
+    <h1 class="hero-title">Un hogar<br>que cuida<br>tu vida.</h1>
+    <button class="scroll-btn" onclick="document.getElementById('intro').scrollIntoView({behavior:'smooth'})">↓</button>
+  </div>
+  <div class="hero-right">
+    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/wellness-hero.jpg"
+         alt="Habitación de bienestar con Crestron Home"
+         onerror="this.style.background='#e8e4df';this.removeAttribute('src')">
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section-intro" id="intro">
+  <div class="section-intro-left">
+    <h2 class="section-title">Tu hogar<br>como aliado<br>del bienestar.</h2>
+  </div>
+  <div class="section-intro-right">
+    <p class="section-body">Crestron Home trasciende la automatización convencional para convertirse en un aliado activo de tu salud. Controla factores ambientales como la calidad del aire, la temperatura del color de la luz, el nivel de CO2 y la humedad para crear el entorno ideal para vivir, trabajar y descansar.</p>
+    <p class="section-body" style="margin-top:20px">La iluminación circadiana de Crestron Home ajusta automáticamente el tono y la intensidad de la luz a lo largo del día, sincronizándose con tu ritmo biológico para mejorar el sueño, la productividad y el estado de ánimo.</p>
+    <a href="#productos" class="see-products-btn">Explorar soluciones →</a>
+  </div>
+</section>
+
+<!-- WELLNESS SECTIONS -->
+<section class="wellness-section">
+  <div class="wellness-left">
+    <p class="supertitle">Iluminación Circadiana</p>
+    <h2>Luz que sigue<br>el ritmo<br>de tu cuerpo.</h2>
+    <p>La investigación científica confirma que la luz influye directamente en la producción de melatonina, el estado de alerta y la calidad del sueño. Crestron Home ajusta automáticamente la temperatura de color de la luz — de tonos cálidos al amanecer y al anochecer, a tonos fríos y estimulantes durante el día.</p>
+    <div class="wellness-icons">
+      <a href="iluminacion.html" class="wellness-icon-item">
+        <span>🌅 Amanecer</span>
+      </a>
+      <a href="iluminacion.html" class="wellness-icon-item">
+        <span>☀️ Día</span>
+      </a>
+      <a href="iluminacion.html" class="wellness-icon-item">
+        <span>🌙 Noche</span>
+      </a>
+    </div>
+  </div>
+  <div class="wellness-right">
+    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/circadian-bedroom.jpg"
+         alt="Dormitorio con iluminación circadiana"
+         onerror="this.style.background='#2a1a2a';this.removeAttribute('src')">
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section">
+  <p class="features-section-title">Un entorno diseñado para tu bienestar</p>
+  <div class="features-grid">
+    <div class="feature-item">
+      <div class="feature-title">Calidad del aire interior</div>
+      <p class="feature-body">Sensores de CO2, VOC y partículas PM2.5 monitorean continuamente el aire. Cuando los niveles son altos, el sistema activa la ventilación automáticamente.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Despertar natural</div>
+      <p class="feature-body">La rutina de despertar combina subida gradual de persianas, aumento suave de iluminación y tu música favorita. Despierta de forma natural sin alarmas bruscas.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Control de humedad</div>
+      <p class="feature-body">Mantén la humedad relativa en el rango óptimo (40-60%) para la salud respiratoria y el bienestar general. Integración con humidificadores y deshumidificadores.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Modo meditación</div>
+      <p class="feature-body">Un toque crea el ambiente perfecto para meditar: luz tenue y cálida, persianas entrecerradas, temperatura confortable y sonidos de naturaleza.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Rutina de bienestar</div>
+      <p class="feature-body">Diseña rutinas diarias completas: yoga matutino, trabajo concentrado, descanso de tarde y preparación para el sueño — todo automatizado.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Temperatura del sueño</div>
+      <p class="feature-body">La temperatura óptima para dormir es 18-20°C. Crestron Home reduce automáticamente la temperatura del dormitorio a medida que se acerca la hora de dormir.</p>
+    </div>
+  </div>
+</section>
+
+<img class="fullwidth-image"
+     src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/wellness-yoga.jpg"
+     alt="Espacio de yoga y meditación con Crestron"
+     onerror="this.style.background='#f0ebe5';this.removeAttribute('src')">
+
+<!-- COMFORT/SECURITY COMBINED SECTION -->
+<section class="security-section">
+  <div class="security-left">
+    <p class="supertitle">Calidad del Aire</p>
+    <h2>Respira mejor<br>en tu hogar.</h2>
+    <p>Los sensores de calidad del aire de Crestron Home monitorizan en tiempo real los niveles de CO2, compuestos orgánicos volátiles (VOC), temperatura y humedad. Cuando se detectan niveles fuera del rango óptimo, el sistema activa automáticamente la ventilación para restablecer un aire limpio y saludable.</p>
+    <div class="security-icons" style="margin-top:32px">
+      <div class="security-icon-item">
+        <span style="font-size:32px">🌬️</span>
+        <span>CO2</span>
+      </div>
+      <div class="security-icon-item">
+        <span style="font-size:32px">💧</span>
+        <span>Humedad</span>
+      </div>
+      <div class="security-icon-item">
+        <span style="font-size:32px">🌡️</span>
+        <span>Temperatura</span>
+      </div>
+    </div>
+  </div>
+  <div class="security-right">
+    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/air-quality-room.jpg"
+         alt="Habitación con control de calidad del aire"
+         onerror="this.style.background='#CCCCCC';this.removeAttribute('src')">
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products-section" id="productos">
+  <div class="products-header">
+    <h2>Productos para Salud y Bienestar</h2>
+  </div>
+
+  <p class="product-category-label">Sensores de Bienestar</p>
+  <div class="product-cards-row">
+    <a href="https://www.crestron.com/Products/Control-Hardware-Software/Hardware/Sensors" target="_blank" class="product-card">
+      <img class="product-card-img"
+           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/iaq-sensor.jpg"
+           alt="IAQ Sensor"
+           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
+      <div class="product-card-body">
+        <div class="product-card-name">CEN-IAQ-SENSOR</div>
+        <div class="product-card-desc">Sensor de calidad del aire interior. Monitoreo en tiempo real de CO2, VOC, temperatura y humedad con reportes en la app.</div>
+        <div class="product-card-cta">Ver más →</div>
+      </div>
+    </a>
+    <a href="https://www.crestron.com/Products/Control-Hardware-Software/Hardware/Sensors" target="_blank" class="product-card">
+      <img class="product-card-img"
+           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/cts-sensor.jpg"
+           alt="CTS Sensor"
+           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
+      <div class="product-card-body">
+        <div class="product-card-name">CTS-TH-CRESNET</div>
+        <div class="product-card-desc">Sensor combinado de temperatura y humedad para monitoreo preciso del ambiente en cada zona del hogar.</div>
+        <div class="product-card-cta">Ver más →</div>
+      </div>
+    </a>
+  </div>
+
+  <p class="product-category-label">Iluminación para Bienestar</p>
+  <div class="product-cards-row">
+    <a href="https://www.crestron.com/Products/Lighting" target="_blank" class="product-card">
+      <img class="product-card-img"
+           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/circadian-dimmer.jpg"
+           alt="Circadian Dimmer"
+           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
+      <div class="product-card-body">
+        <div class="product-card-name">CLW-DIM-CCT</div>
+        <div class="product-card-desc">Dimmer con control de temperatura de color (CCT). Ajuste de luz desde 2700K (cálido) hasta 6500K (frío) para iluminación circadiana.</div>
+        <div class="product-card-cta">Ver más →</div>
+      </div>
+    </a>
+    <a href="https://www.crestron.com/Products/Lighting/Keypads" target="_blank" class="product-card">
+      <img class="product-card-img"
+           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/horizon-keypad.jpg"
+           alt="Horizon Keypad"
+           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
+      <div class="product-card-body">
+        <div class="product-card-name">Horizon® Keypad</div>
+        <div class="product-card-desc">Keypad con presets de bienestar programables. Activa "Modo Despertar", "Concentración", "Relajación" o "Sueño" con un solo toque.</div>
+        <div class="product-card-cta">Ver más →</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial-section">
+  <p class="testimonial-quote">"Desde que instalamos Crestron Home con iluminación circadiana y control de calidad del aire, dormimos mucho mejor. Es como si la casa nos cuidara."</p>
+  <div class="testimonial-author">
+    <div class="testimonial-author-name">Valentina M.</div>
+    <div class="testimonial-author-role">Propietaria, Córdoba</div>
+  </div>
+</section>
+
+<!-- DISCOVER MORE -->
+<section class="discover-section">
+  <h2>Descubrir más categorías</h2>
+  <div class="discover-slider-wrapper">
+    <div class="discover-slider" id="discoverSlider">
+      <a href="iluminacion.html" class="discover-card"><div class="discover-card-name">Iluminación</div><div class="discover-card-cta">Explorar →</div></a>
+      <a href="persianas.html" class="discover-card"><div class="discover-card-name">Persianas</div><div class="discover-card-cta">Explorar →</div></a>
+      <a href="termostatos.html" class="discover-card"><div class="discover-card-name">Termostatos</div><div class="discover-card-cta">Explorar →</div></a>
+      <a href="audio.html" class="discover-card"><div class="discover-card-name">Audio</div><div class="discover-card-cta">Explorar →</div></a>
+      <a href="video.html" class="discover-card"><div class="discover-card-name">Video</div><div class="discover-card-cta">Explorar →</div></a>
+      <a href="controladores.html" class="discover-card"><div class="discover-card-name">Controladores</div><div class="discover-card-cta">Explorar →</div></a>
+      <a href="piscina-spa.html" class="discover-card"><div class="discover-card-name">Piscina y Spa</div><div class="discover-card-cta">Explorar →</div></a>
+      <a href="todo-lo-demas.html" class="discover-card"><div class="discover-card-name">Todo lo Demás</div><div class="discover-card-cta">Explorar →</div></a>
+    </div>
+    <div class="slider-nav">
+      <button class="slider-btn" onclick="slideLeft('discoverSlider')">←</button>
+      <button class="slider-btn" onclick="slideRight('discoverSlider')">→</button>
+    </div>
+  </div>
+</section>
+
+<section class="app-cta">
+  <div class="app-cta-text">
+    <h3>Tu bienestar, a cargo de tu hogar.</h3>
+    <p>La app Crestron Home es gratuita. Disponible en iOS y Android.</p>
+    <div class="app-badges">
+      <a href="https://apps.apple.com/us/app/crestron-home/id1466827669" target="_blank" class="app-badge">🍎 App Store</a>
+      <a href="https://play.google.com/store/apps/details?id=com.crestron.crestronhome" target="_blank" class="app-badge">▶ Google Play</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col"><h4>Productos</h4><ul>
+      <li><a href="iluminacion.html">Iluminación</a></li><li><a href="persianas.html">Persianas y Estores</a></li>
+      <li><a href="termostatos.html">Termostatos</a></li><li><a href="acceso-hogar.html">Acceso al Hogar</a></li>
+      <li><a href="audio.html">Audio</a></li><li><a href="video.html">Video</a></li>
+      <li><a href="controladores.html">Controladores</a></li><li><a href="piscina-spa.html">Piscina y Spa</a></li>
+      <li><a href="salud-bienestar.html">Salud y Bienestar</a></li><li><a href="todo-lo-demas.html">Todo lo Demás</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Soporte</h4><ul>
+      <li><a href="#">Encontrar un Dealer</a></li><li><a href="#">Soporte Técnico</a></li><li><a href="#">Documentación</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Empresa</h4><ul>
+      <li><a href="#">Acerca de Crestron</a></li><li><a href="#">Carreras</a></li><li><a href="#">Contacto</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>App Móvil</h4>
+      <div class="footer-app-btns">
+        <a href="https://apps.apple.com/us/app/crestron-home/id1466827669" target="_blank" class="footer-app-btn">🍎 App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.crestron.crestronhome" target="_blank" class="footer-app-btn">▶ Google Play</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 Crestron Electronics, Inc. Todos los derechos reservados.</p>
+    <div class="footer-links"><a href="#">Privacidad</a><a href="#">Términos de Uso</a><a href="#">Accesibilidad</a></div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+</body>
+</html>

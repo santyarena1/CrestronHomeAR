@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cameo® Keypad — Iluminación — Crestron Home®</title>
+  <meta name="description" content="Cameo® Keypad para Crestron Home: keypads y dimmers con lenguaje arquitectónico sobrio. Ficha en actualización con acabados y media.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="page-keypad-sub page-cameo">
+
+<nav class="navbar">
+  <div class="navbar-left">
+    <button class="menu-btn" onclick="openMenu()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="6" width="6" height="6"/><rect x="11" y="6" width="6" height="6"/>
+        <rect x="3" y="14" width="6" height="6"/><rect x="11" y="14" width="6" height="6"/>
+      </svg>
+      MENÚ
+    </button>
+    <a href="index.html" class="logo">CRESTRON <span>HOME</span>®</a>
+  </div>
+  <div class="navbar-right">
+    <a href="#">Blog</a>
+    <a href="#">Ayuda</a>
+    <a href="https://www.instagram.com/crestronhome" target="_blank" rel="noopener noreferrer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg>
+    </a>
+    <button class="btn-download" type="button" onclick="window.open('https://apps.apple.com/us/app/crestron-home/id1466827669')">Descargar App</button>
+  </div>
+</nav>
+
+<div class="mega-menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+<div class="mega-menu" id="megaMenu">
+  <button class="menu-close" type="button" onclick="closeMenu()">✕</button>
+  <div class="menu-section">
+    <h4>Experiencia</h4>
+    <ul>
+      <li><a href="index.html">Crestron Home OS</a></li>
+      <li><a href="controladores.html">Tú Tienes el Control</a></li>
+    </ul>
+  </div>
+  <div class="menu-section">
+    <h4>Productos</h4>
+    <ul>
+      <li><a href="iluminacion.html">Iluminación</a></li>
+      <li><a href="persianas.html">Persianas y Estores</a></li>
+      <li><a href="termostatos.html">Termostatos</a></li>
+      <li><a href="acceso-hogar.html">Acceso al Hogar</a></li>
+      <li><a href="audio.html">Audio</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="controladores.html">Controladores</a></li>
+      <li><a href="piscina-spa.html">Piscina y Spa</a></li>
+      <li><a href="salud-bienestar.html">Salud y Bienestar</a></li>
+      <li><a href="todo-lo-demas.html">Todo lo Demás</a></li>
+    </ul>
+  </div>
+  <div class="menu-section">
+    <h4>Soporte</h4>
+    <ul>
+      <li><a href="#">Encontrar un Dealer</a></li>
+      <li><a href="#">Soporte Técnico</a></li>
+      <li><a href="#">Documentación</a></li>
+    </ul>
+  </div>
+</div>
+
+<main class="keypad-subpage">
+  <nav class="keypad-subpage-nav" aria-label="Migas de pan">
+    <a href="index.html">Inicio</a>
+    <span aria-hidden="true">/</span>
+    <a href="iluminacion.html">Iluminación</a>
+    <span aria-hidden="true">/</span>
+    <span>Cameo® Keypad</span>
+  </nav>
+
+  <div class="keypad-subpage-hero keypad-subpage-hero--cameo">
+    <img src="LIGHTINIG/cameo/hero-cameo-keypad.jpg" alt="Cameo Keypad edge-to-edge con acabado sobrio y perfil decorativo" width="800" height="1000" loading="eager" decoding="async" onerror="this.src='LIGHTINIG/cameo-keypad.png'">
+  </div>
+
+  <section class="horizon-editorial">
+    <div class="horizon-editorial-inner">
+      <p class="horizon-editorial-kicker">Crestron Home®</p>
+      <h1 id="cameoPageTitle">Cameo® Keypad</h1>
+      <p class="horizon-editorial-lead">Cameo es la línea de keypads y dimmers con la que Crestron lleva el control de iluminación al lenguaje del diseño interior: limpio, intuitivo y personalizable.</p>
+      <p>Más que un interruptor, Cameo funciona como el punto de contacto entre la persona y la casa inteligente. Desde una sola interfaz de pared podés regular luces, activar escenas, mover cortinas y acceder a funciones integradas de audio, climatización y otros sistemas del hogar.</p>
+      <p>Su valor está en combinar presencia visual cuidada con flexibilidad real de proyecto: diseño edge-to-edge, acabados smooth o textured, colores base white, grey, almond y black, y opción flush-mount para una integración todavía más discreta. Abajo recorrés su propuesta visual y al final podés probar un personalizador propio de Cameo.</p>
+      <p><a href="https://www.crestron.com/Products/Lighting/Keypads" target="_blank" rel="noopener noreferrer" class="horizon-modal-external" style="margin-top:8px">Especificaciones en crestron.com →</a></p>
+    </div>
+  </section>
+
+  <section class="cameo-tailor" aria-labelledby="cameo-tailor-title">
+    <div class="cameo-tailor-inner">
+      <h2 id="cameo-tailor-title">Personalizá cada detalle, del tacto al tono.</h2>
+      <p class="cameo-tailor-intro">Si buscás un control de iluminación que acompañe interiores sofisticados, Cameo combina diseño y versatilidad: colores ricos, acabados smooth o textured y personalización real, desde grabados a medida hasta distintas configuraciones de botones para cada ambiente.</p>
+      <div class="cameo-tailor-grid">
+        <article class="cameo-tailor-item">
+          <h3>Diseño unificado</h3>
+          <p>Mantené una expresión visual coherente en toda la casa, con el mismo lenguaje de forma, tacto y funcionalidad.</p>
+        </article>
+        <article class="cameo-tailor-item">
+          <h3>Arquitectura sin bisel</h3>
+          <p>Su estética edge-to-edge aprovecha mejor la superficie y ofrece una presencia más limpia sobre la pared.</p>
+        </article>
+        <article class="cameo-tailor-item">
+          <h3>Formato decorativo estándar</h3>
+          <p>Se integra con naturalidad en estilos clásicos o contemporáneos, con una lectura atemporal y premium.</p>
+        </article>
+        <article class="cameo-tailor-item">
+          <h3>Cableado o inalámbrico</h3>
+          <p>Facilita tanto obra nueva como retrofit, para lograr una experiencia consistente en distintos tipos de proyecto.</p>
+        </article>
+        <article class="cameo-tailor-item">
+          <h3>Retroiluminación RGB</h3>
+          <p>Comunica estados y acompaña escenas con color dinámico, ajustándose de forma inteligente a la luz ambiente.</p>
+        </article>
+        <article class="cameo-tailor-item">
+          <h3>Grabado personalizado</h3>
+          <p>Textos, íconos y distribución de teclas para que cada keypad responda al uso real de cada espacio.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cameo-showcase" aria-label="Galería visual Cameo">
+    <div class="cameo-showcase-inner">
+      <figure class="cameo-showcase-keypad">
+        <img src="LIGHTINIG/cameo-control-your-home.png" alt="Cameo keypad en acabado gris sobre fondo decorativo" width="1920" height="1080" loading="lazy" decoding="async" onerror="this.src='LIGHTINIG/cameo-keypad-alt.png'">
+      </figure>
+      <figure class="cameo-showcase-room">
+        <img src="LIGHTINIG/cameo-light-up-room.png" alt="Ambiente residencial sofisticado con iluminación integrada" width="1920" height="1080" loading="lazy" decoding="async" onerror="this.src='LIGHTINIG/showcase-argentina-oficial.png'">
+      </figure>
+    </div>
+  </section>
+
+  <div class="horizon-story-split-wrap">
+    <div class="horizon-story-split">
+      <div class="horizon-story-split-media horizon-story-split-media--anchor-left cameo-story-media cameo-story-media--video">
+        <video autoplay muted loop playsinline preload="metadata" poster="LIGHTINIG/cameo-keypad-alt.png">
+          <source src="LIGHTINIG/gray-gang.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="horizon-story-split-copy">
+        <h2 id="cm-design-title">Diseño decorativo y atemporal</h2>
+        <p>Cameo se integra al ambiente con arquitectura sin bisel, perfil limpio y lenguaje visual universal. No busca imponerse como gadget: busca que la pared se vea ordenada, elegante y coherente con la decoración.</p>
+        <p>Con opciones smooth y textured en white, grey, almond y black, la línea permite resolver distintos estilos sin cambiar de plataforma de control.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="cameo-control-hero" aria-labelledby="cm-control-title">
+    <div class="cameo-control-hero-copy">
+      <h2 id="cm-control-title">Control claro en una sola interfaz</h2>
+      <p class="cameo-control-hero-lead">Creá tu propia configuración.</p>
+      <p>Los keypads Cameo pueden configurarse en hasta 137 layouts. Elegí entre tres tipos de botones, definí grabados a medida y combiná hardware cableado o inalámbrico —dimmers, switches y keypads auxiliares— para adaptarlo a cada proyecto.</p>
+    </div>
+    <figure class="cameo-control-hero-media">
+      <img src="LIGHTINIG/cameo-create-configuration.png" alt="Configuración personalizada de Cameo con opciones de botones y módulos" width="1024" height="367" loading="lazy" decoding="async" onerror="this.src='LIGHTINIG/cameo-dimmer-3-oficial.png'">
+    </figure>
+  </section>
+
+  <section class="horizon-metal-block" aria-labelledby="cm-position-title">
+    <div class="horizon-metal-inner">
+      <span class="horizon-story-badge">Versátil</span>
+      <h2 id="cm-position-title">Por qué Cameo suma valor en cada proyecto</h2>
+      <p>Cameo resuelve estética, orden y facilidad de uso en una sola familia: integra funciones cotidianas, mantiene una lectura visual limpia en la pared y permite personalizar cada keypad según el ambiente.</p>
+    </div>
+  </section>
+
+  <section class="horizon-finish-dock" aria-labelledby="cameo-finish-dock-title">
+    <div class="horizon-finish-dock-inner">
+      <!-- Reemplazar con renders finales cuando esten disponibles:
+           LIGHTINIG/cameo/personalizer/smooth-{white|grey|almond|black}.png
+           LIGHTINIG/cameo/personalizer/textured-{white|grey|almond|black}.png -->
+      <p class="horizon-config-highlight"><span id="cameoConfigHighlightText">Personalizá tus keypads Cameo en tiempo real</span></p>
+      <div class="horizon-finish-dock-split">
+        <div class="horizon-finish-dock-preview-col">
+          <div class="horizon-finish-dock-stage" aria-live="polite">
+            <div class="horizon-keypad-interactive cameo-keypad-interactive" id="cameoKeypadInteractive">
+              <img id="cameoFinishPreview" class="horizon-finish-dock-preview cameo-finish-dock-preview" src="LIGHTINIG/cameo/personalizer/smooth-white.png" alt="Cameo keypad: Smooth / White" width="800" height="1000" loading="eager" decoding="async" onerror="this.src='LIGHTINIG/cameo-keypad.png'">
+              <div class="horizon-keypad-keys">
+                <div class="horizon-keypad-keys-hitzone">
+                  <button type="button" class="horizon-key cameo-key" data-key-index="0" aria-pressed="false" title="Tecla 1: clic para encender o apagar">
+                    <span class="horizon-key-label cameo-key-label"></span>
+                  </button>
+                  <button type="button" class="horizon-key cameo-key" data-key-index="1" aria-pressed="false" title="Tecla 2: clic para encender o apagar">
+                    <span class="horizon-key-label cameo-key-label"></span>
+                  </button>
+                  <button type="button" class="horizon-key cameo-key" data-key-index="2" aria-pressed="false" title="Tecla 3: clic para encender o apagar">
+                    <span class="horizon-key-label cameo-key-label"></span>
+                  </button>
+                  <button type="button" class="horizon-key cameo-key" data-key-index="3" aria-pressed="false" title="Tecla 4: clic para encender o apagar">
+                    <span class="horizon-key-label cameo-key-label"></span>
+                  </button>
+                  <button type="button" class="horizon-key cameo-key" data-key-index="4" aria-pressed="false" title="Tecla 5: clic para encender o apagar">
+                    <span class="horizon-key-label cameo-key-label"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p id="cameoFinishCaption" class="horizon-finish-dock-caption">Smooth / White</p>
+          <div class="horizon-keypad-controls" id="cameoKeypadControls">
+            <p class="horizon-keypad-controls-title">Personalizá tus keypads</p>
+            <div class="horizon-keypad-label-inputs">
+              <label class="horizon-keypad-label-field"><span class="sr-only">Tecla 1</span><input type="text" class="horizon-keypad-text-input cameo-keypad-text-input" data-key-index="0" maxlength="14" placeholder="Ej. Cena" autocomplete="off"></label>
+              <label class="horizon-keypad-label-field"><span class="sr-only">Tecla 2</span><input type="text" class="horizon-keypad-text-input cameo-keypad-text-input" data-key-index="1" maxlength="14" placeholder="Ej. Noche" autocomplete="off"></label>
+              <label class="horizon-keypad-label-field"><span class="sr-only">Tecla 3</span><input type="text" class="horizon-keypad-text-input cameo-keypad-text-input" data-key-index="2" maxlength="14" placeholder="Persiana" autocomplete="off"></label>
+              <label class="horizon-keypad-label-field"><span class="sr-only">Tecla 4</span><input type="text" class="horizon-keypad-text-input cameo-keypad-text-input" data-key-index="3" maxlength="14" placeholder="Luz" autocomplete="off"></label>
+              <label class="horizon-keypad-label-field"><span class="sr-only">Tecla 5</span><input type="text" class="horizon-keypad-text-input cameo-keypad-text-input" data-key-index="4" maxlength="14" placeholder="All off" autocomplete="off"></label>
+            </div>
+            <p class="horizon-keypad-controls-title horizon-keypad-controls-title--follow">Color del texto</p>
+            <div class="horizon-keypad-color-row">
+              <label class="horizon-keypad-color-field">Texto apagado<input type="color" id="cmColorTextOff" value="#a9a9ae" title="Color del grabado cuando la tecla está apagada"></label>
+              <label class="horizon-keypad-color-field">Texto encendido<input type="color" id="cmColorTextOn" value="#fff6d6" title="Color del grabado cuando la tecla está encendida"></label>
+            </div>
+            <p class="horizon-keypad-hint">Tocá cada tecla en la imagen para alternar entre texto apagado y encendido (solo cambia el color del texto).</p>
+          </div>
+        </div>
+        <div class="horizon-finish-dock-picker-col">
+          <h2 id="cameo-finish-dock-title" class="horizon-finish-dock-heading">Probá cómo quedan tus keypads personalizados</h2>
+          <p class="horizon-finish-dock-sub">Elegí una familia de acabado y un color base. La vista previa se actualiza al instante para ayudarte a decidir.</p>
+          <div id="cameoFinishSwatches" class="horizon-finish-categories" role="radiogroup" aria-label="Cameo finish categories">
+            <div class="horizon-finish-category">
+              <h3 class="horizon-finish-cat-title">Smooth</h3>
+              <div class="horizon-finish-cat-row">
+                <button type="button" class="horizon-swatch is-selected" role="radio" aria-checked="true" data-src="LIGHTINIG/cameo/personalizer/smooth-white.png" data-label="Smooth / White">
+                  <span class="horizon-swatch-circle" style="background:#f2f2ef"></span>
+                  <span class="horizon-swatch-name">White</span>
+                </button>
+                <button type="button" class="horizon-swatch" role="radio" aria-checked="false" data-src="LIGHTINIG/cameo/personalizer/smooth-grey.png" data-label="Smooth / Grey">
+                  <span class="horizon-swatch-circle" style="background:#bcbcc0"></span>
+                  <span class="horizon-swatch-name">Grey</span>
+                </button>
+                <button type="button" class="horizon-swatch" role="radio" aria-checked="false" data-src="LIGHTINIG/cameo/personalizer/smooth-almond.png" data-label="Smooth / Almond">
+                  <span class="horizon-swatch-circle" style="background:#d9d0bb"></span>
+                  <span class="horizon-swatch-name">Almond</span>
+                </button>
+                <button type="button" class="horizon-swatch" role="radio" aria-checked="false" data-src="LIGHTINIG/cameo/personalizer/smooth-black.png" data-label="Smooth / Black">
+                  <span class="horizon-swatch-circle" style="background:#2b2b2f"></span>
+                  <span class="horizon-swatch-name">Black</span>
+                </button>
+              </div>
+            </div>
+            <div class="horizon-finish-category">
+              <h3 class="horizon-finish-cat-title">Textured</h3>
+              <div class="horizon-finish-cat-row">
+                <button type="button" class="horizon-swatch" role="radio" aria-checked="false" data-src="LIGHTINIG/cameo/personalizer/textured-white.png" data-label="Textured / White">
+                  <span class="horizon-swatch-circle" style="background:linear-gradient(135deg,#f2f2ef 0%,#ddddda 100%)"></span>
+                  <span class="horizon-swatch-name">White</span>
+                </button>
+                <button type="button" class="horizon-swatch" role="radio" aria-checked="false" data-src="LIGHTINIG/cameo/personalizer/textured-grey.png" data-label="Textured / Grey">
+                  <span class="horizon-swatch-circle" style="background:linear-gradient(135deg,#b9b9bd 0%,#8f8f95 100%)"></span>
+                  <span class="horizon-swatch-name">Grey</span>
+                </button>
+                <button type="button" class="horizon-swatch" role="radio" aria-checked="false" data-src="LIGHTINIG/cameo/personalizer/textured-almond.png" data-label="Textured / Almond">
+                  <span class="horizon-swatch-circle" style="background:linear-gradient(135deg,#d8ceb5 0%,#baae95 100%)"></span>
+                  <span class="horizon-swatch-name">Almond</span>
+                </button>
+                <button type="button" class="horizon-swatch" role="radio" aria-checked="false" data-src="LIGHTINIG/cameo/personalizer/textured-black.png" data-label="Textured / Black">
+                  <span class="horizon-swatch-circle" style="background:linear-gradient(135deg,#2f2f33 0%,#171719 100%)"></span>
+                  <span class="horizon-swatch-name">Black</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="horizon-spaces cameo-spaces" aria-labelledby="cm-spaces-title">
+    <div class="horizon-spaces-bg">
+      <img src="LIGHTINIG/cameo-lifestyle-keypad-white.png" alt="" width="1024" height="576" loading="lazy" decoding="async" aria-hidden="true" onerror="this.src='LIGHTINIG/cameo-dimmer-1b-oficial.png'">
+    </div>
+    <div class="horizon-spaces-inner">
+      <p class="horizon-spaces-kicker">Experiencia diaria</p>
+      <h2 id="cm-spaces-title">Control intuitivo, casa más ordenada</h2>
+      <p>Cameo no está pensado solo para encender o apagar luces. Está pensado para que la tecnología acompañe mejor la forma en que vivís la casa: más comodidad en acciones diarias, más limpieza visual en la pared y más coherencia entre diseño interior y sistema de control.</p>
+    </div>
+  </section>
+
+  <section class="keypads-hub" style="background:#fff;padding-top:48px;padding-bottom:64px">
+    <div class="keypads-hub-inner" style="text-align:center">
+      <a href="iluminacion.html" class="see-products-btn" style="display:inline-flex">← Volver a Iluminación</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Productos</h4>
+      <ul>
+        <li><a href="iluminacion.html">Iluminación</a></li>
+        <li><a href="cameo.html">Cameo® Keypad</a></li>
+        <li><a href="persianas.html">Persianas y Estores</a></li>
+        <li><a href="termostatos.html">Termostatos</a></li>
+        <li><a href="acceso-hogar.html">Acceso al Hogar</a></li>
+        <li><a href="audio.html">Audio</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="controladores.html">Controladores</a></li>
+        <li><a href="piscina-spa.html">Piscina y Spa</a></li>
+        <li><a href="salud-bienestar.html">Salud y Bienestar</a></li>
+        <li><a href="todo-lo-demas.html">Todo lo Demás</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Soporte</h4>
+      <ul>
+        <li><a href="#">Encontrar un Dealer</a></li>
+        <li><a href="#">Soporte Técnico</a></li>
+        <li><a href="#">Documentación</a></li>
+        <li><a href="#">Actualizaciones de Software</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#">Acerca de Crestron</a></li>
+        <li><a href="#">Prensa</a></li>
+        <li><a href="#">Carreras</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>App Móvil</h4>
+      <div class="footer-app-btns">
+        <a href="https://apps.apple.com/us/app/crestron-home/id1466827669" target="_blank" rel="noopener noreferrer" class="footer-app-btn">🍎 App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.crestron.crestronhome" target="_blank" rel="noopener noreferrer" class="footer-app-btn">▶ Google Play</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 Crestron Electronics, Inc. Todos los derechos reservados.</p>
+    <div class="footer-links">
+      <a href="#">Privacidad</a>
+      <a href="#">Términos de Uso</a>
+      <a href="#">Accesibilidad</a>
+    </div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+</body>
+</html>

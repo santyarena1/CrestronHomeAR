@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iluminación — Crestron Home®</title>
+  <meta name="description" content="Iluminación Crestron Home para Argentina: escenas, control por zonas, dimming preciso y automatizaciones para una casa más cómoda y coherente.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="page-iluminacion">
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-left">
+    <button class="menu-btn" onclick="openMenu()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="6" width="6" height="6"/><rect x="11" y="6" width="6" height="6"/>
+        <rect x="3" y="14" width="6" height="6"/><rect x="11" y="14" width="6" height="6"/>
+      </svg>
+      MENÚ
+    </button>
+    <a href="index.html" class="logo">CRESTRON <span>HOME</span>®</a>
+  </div>
+  <div class="navbar-right">
+    <a href="#">Blog</a>
+    <a href="#">Ayuda</a>
+    <a href="https://www.instagram.com/crestronhome" target="_blank">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg>
+    </a>
+    <button class="btn-download" onclick="window.open('https://apps.apple.com/us/app/crestron-home/id1466827669')">Descargar App</button>
+  </div>
+</nav>
+
+<div class="mega-menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+<div class="mega-menu" id="megaMenu">
+  <button class="menu-close" onclick="closeMenu()">✕</button>
+  <div class="menu-section">
+    <h4>Experiencia</h4>
+    <ul>
+      <li><a href="index.html">Crestron Home OS</a></li>
+      <li><a href="controladores.html">Tú Tienes el Control</a></li>
+    </ul>
+  </div>
+  <div class="menu-section">
+    <h4>Productos</h4>
+    <ul>
+      <li><a href="iluminacion.html">Iluminación</a></li>
+      <li><a href="persianas.html">Persianas y Estores</a></li>
+      <li><a href="termostatos.html">Termostatos</a></li>
+      <li><a href="acceso-hogar.html">Acceso al Hogar</a></li>
+      <li><a href="audio.html">Audio</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="controladores.html">Controladores</a></li>
+      <li><a href="piscina-spa.html">Piscina y Spa</a></li>
+      <li><a href="salud-bienestar.html">Salud y Bienestar</a></li>
+      <li><a href="todo-lo-demas.html">Todo lo Demás</a></li>
+    </ul>
+  </div>
+  <div class="menu-section">
+    <h4>Soporte</h4>
+    <ul>
+      <li><a href="#">Encontrar un Dealer</a></li>
+      <li><a href="#">Soporte Técnico</a></li>
+      <li><a href="#">Documentación</a></li>
+    </ul>
+  </div>
+</div>
+
+<nav class="page-breadcrumb" aria-label="Migas de pan">
+  <a href="index.html">Inicio</a>
+  <span aria-hidden="true">/</span>
+  <span>Iluminación</span>
+</nav>
+
+<!-- HERO SPLIT -->
+<section class="hero-split">
+  <div class="hero-left">
+    <img class="category-icon" src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/icon2_lighting.svg" width="64" height="64" alt="" aria-hidden="true" loading="eager" decoding="async" onerror="this.style.display='none'">
+    <p class="supertitle">Crestron Home® — Iluminación</p>
+    <h1 class="hero-title hero-title--iluminacion">La <span class="hero-title-highlight">iluminación</span> adecuada<br>para cada momento.</h1>
+    <button class="scroll-btn" onclick="document.getElementById('intro').scrollIntoView({behavior:'smooth'})">↓</button>
+  </div>
+  <div class="hero-right">
+    <img class="hero-right-img"
+         src="https://previews.us-east-1.widencdn.net/preview/21452463/assets/asset-view/4905a47e-47bf-4f87-ad9f-670498d3f37d/thumbnail/eyJ3IjoxMDgwLCJoIjoxMDgwLCJzY29wZSI6ImFwcCJ9?sig.ver=1&amp;sig.keyId=us-east-1.20240821&amp;sig.expires=1776650400&amp;sig=tWp0-st-tNVjZM0P9T3oR6na9-s0C61jbGhfb89TnbE"
+         alt="Sala con iluminación controlada por Crestron"
+         onerror="this.onerror=null;this.src='LIGHTINIG/product-lighting-hero-oficial.png'">
+  </div>
+</section>
+
+<!-- SECTION INTRO -->
+<section class="section-intro lighting-intro" id="intro">
+  <div class="section-intro-left">
+    <figure class="lighting-intro-figure">
+      <img src="LIGHTINIG/showcase-argentina-oficial.png" alt="App Crestron Home Luces sobre cocina moderna" width="1200" height="800" loading="lazy" decoding="async">
+    </figure>
+    <h2 class="section-title lighting-intro-title">Menos interruptores.<br>Más atmósfera.</h2>
+  </div>
+  <div class="section-intro-right">
+    <p class="section-body">Con Crestron Home Lighting, la iluminación deja de ser solo encender y apagar. Podés activar <span class="intro-accent">escenas</span> para recibir gente, bajar intensidad para una cena, dar más claridad al arrancar el día o <span class="intro-accent">apagar toda la casa</span> con un solo gesto.</p>
+    <p class="section-body" style="margin-top:20px">Todo se gestiona desde una única experiencia: keypad, app, pantalla táctil o automatización. La compatibilidad se define según el proyecto y tipo de luminaria para asegurar un resultado <span class="intro-accent">realmente sólido</span>.</p>
+    <p class="section-body" style="margin-top:20px">La propuesta es simple: una casa que <span class="intro-accent">responde mejor</span>, se ve mejor y requiere menos esfuerzo. La tecnología queda en segundo plano; vos solo disfrutás ambientes bien resueltos en cada momento.</p>
+    <a href="#keypads-story" class="see-products-btn">Ver keypads Horizon y Cameo →</a>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section">
+  <p class="features-section-title">¿Por qué elegir iluminación Crestron Home?</p>
+  <div class="features-grid">
+    <div class="feature-item">
+      <div class="feature-title">Escenas para la vida real</div>
+      <p class="feature-body">Un toque transforma varias luces a la vez: de día a cena, de cine a noche, con una transición natural y coherente.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Automatización por horarios naturales</div>
+      <p class="feature-body">Programá eventos por hora exacta, amanecer o atardecer para que la luz acompañe tu rutina sin pedirte atención constante.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Dimming preciso</div>
+      <p class="feature-body">No es solo prender o apagar. Ajustá intensidad por ambiente para lograr la luz justa en cada momento.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Control por zonas</div>
+      <p class="feature-body">Cada área puede tener su propia lógica sin perder una visión global de la casa: cocina, living, pasillos o suite principal.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Control físico y virtual</div>
+      <p class="feature-body">La misma experiencia funciona desde keypads, app, pantallas táctiles y automatizaciones programadas.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Bienestar visual</div>
+      <p class="feature-body">En configuraciones compatibles, podés ajustar intensidad y temperatura de color para acompañar mañana, tarde y noche.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FULL WIDTH VIDEO (debajo del bloque oscuro de beneficios) -->
+<div class="fullwidth-video">
+  <video autoplay muted loop playsinline preload="auto" aria-label="Video de iluminación Crestron Home OS4">
+    <source src="LIGHTINIG/product_lighting_-_os4_update-(1080p).mp4" type="video/mp4">
+  </video>
+</div>
+
+<!-- AMBIENTE / editorial (estilo referencia Crestron) -->
+<section class="lighting-ambiance-billboard" aria-labelledby="lighting-ambiance-heading">
+  <div class="lighting-ambiance-inner">
+    <div class="lighting-ambiance-col lighting-ambiance-col-head">
+      <p class="lighting-ambiance-kicker">Ambiente</p>
+      <h2 id="lighting-ambiance-heading" class="lighting-ambiance-headline">
+        Al amanecer la luz sube poco a poco y las persianas se abren con calma para <span class="lighting-accent-text">darte la bienvenida</span> al nuevo día.
+      </h2>
+    </div>
+    <div class="lighting-ambiance-col lighting-ambiance-col-points">
+      <div class="lighting-ambiance-point">
+        <img class="lighting-ambiance-icon" src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/icon2_lighting.svg" width="29" height="29" alt="" aria-hidden="true">
+        <p class="lighting-ambiance-point-text">
+          <strong class="lighting-ambiance-lead">Creá el clima</strong> para una cena, una noche de películas en casa o la luz ideal para una videollamada de trabajo: <span class="lighting-accent-text">un solo gesto</span> y el ambiente cambia.
+        </p>
+      </div>
+      <div class="lighting-ambiance-point">
+        <img class="lighting-ambiance-icon" src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/icon2_lighting.svg" width="29" height="29" alt="" aria-hidden="true">
+        <p class="lighting-ambiance-point-text">
+          <strong class="lighting-ambiance-lead">La luz te acompaña</strong> cuando entrás a un espacio y se apaga sola poco después de irte. Al final del día, tocá “Buenas noches” desde la cama y <span class="lighting-accent-text">todo baja el ritmo</span> junto con las persianas.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEYPADS: enlaces a subpáginas Horizon / Cameo -->
+<section class="keypads-hub" id="keypads-story">
+  <div class="keypads-hub-inner">
+    <p class="keypads-hub-kicker">Keypads Crestron Home</p>
+    <h2 class="keypads-hub-title">Horizon® y Cameo®</h2>
+    <p class="keypads-hub-intro">Dos familias de keypads y dimmers para la misma plataforma. Tocá cada imagen para ver ficha, comparativa y —en Horizon®— el configurador de acabados y grabados.</p>
+    <div class="keypads-hub-grid">
+      <a href="horizon.html" class="keypads-hub-card">
+        <div class="keypads-hub-card-img-wrap">
+          <img src="LIGHTINIG/horizon-textured-black-detail.png" alt="Horizon Keypad acabado texturado negro con grabados retroiluminados" width="800" height="1200" loading="lazy" decoding="async" onerror="this.src='LIGHTINIG/horizon-keypad-lineup.png'">
+        </div>
+        <div class="keypads-hub-card-body">
+          <div class="keypads-hub-card-title">Horizon® Keypad</div>
+          <p class="keypads-hub-card-desc">Nueva generación: materiales premium, retroiluminación RGB y configurador de acabados en la subpágina.</p>
+          <div class="keypads-hub-card-cta">Abrir ficha Horizon →</div>
+        </div>
+      </a>
+      <a href="cameo.html" class="keypads-hub-card">
+        <div class="keypads-hub-card-img-wrap">
+          <img src="LIGHTINIG/cameo-keypad.png" alt="Cameo Keypad Crestron Home" width="560" height="720" loading="lazy" decoding="async">
+        </div>
+        <div class="keypads-hub-card-body">
+          <div class="keypads-hub-card-title">Cameo® Keypad</div>
+          <p class="keypads-hub-card-desc">Lenguaje arquitectónico sobrio y control completo desde la pared. La ficha detallada y media se amplían próximamente.</p>
+          <div class="keypads-hub-card-cta">Abrir ficha Cameo →</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- DAILY USE CASES -->
+<section class="features-section lighting-use-cases">
+  <p class="features-section-title">Escenarios cotidianos que mejoran la experiencia</p>
+  <div class="features-grid">
+    <div class="feature-item">
+      <div class="feature-title">Llegada a casa</div>
+      <p class="feature-body">Al atardecer, una escena puede encender recibidor, cocina y circulación con niveles suaves para una bienvenida natural.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Cena</div>
+      <p class="feature-body">El comedor baja intensidad mientras cocina y apoyo perimetral mantienen la luz funcional donde todavía hay movimiento.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Cine</div>
+      <p class="feature-body">Una Quick Action combina iluminación, persianas y entretenimiento para lograr ambiente con un solo toque.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Noche</div>
+      <p class="feature-body">Un botón puede lanzar “All Off” o bajar luz progresivamente para cerrar el día con comodidad.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Paso nocturno</div>
+      <p class="feature-body">Con sensores compatibles, la respuesta de luz se adapta al horario para evitar deslumbramiento durante la madrugada.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Rutina semanal</div>
+      <p class="feature-body">Eventos programados por hora exacta, amanecer o atardecer reducen tareas repetitivas y sostienen una casa ordenada.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DISCOVER MORE -->
+<section class="discover-section">
+  <h2>Descubrir más categorías</h2>
+  <div class="discover-slider-wrapper">
+    <div class="discover-slider" id="discoverSlider">
+      <a href="persianas.html" class="discover-card">
+        <div class="discover-card-name">Persianas y Estores</div>
+        <div class="discover-card-cta">Explorar →</div>
+      </a>
+      <a href="termostatos.html" class="discover-card">
+        <div class="discover-card-name">Termostatos</div>
+        <div class="discover-card-cta">Explorar →</div>
+      </a>
+      <a href="audio.html" class="discover-card">
+        <div class="discover-card-name">Audio</div>
+        <div class="discover-card-cta">Explorar →</div>
+      </a>
+      <a href="video.html" class="discover-card">
+        <div class="discover-card-name">Video</div>
+        <div class="discover-card-cta">Explorar →</div>
+      </a>
+      <a href="controladores.html" class="discover-card">
+        <div class="discover-card-name">Controladores</div>
+        <div class="discover-card-cta">Explorar →</div>
+      </a>
+      <a href="acceso-hogar.html" class="discover-card">
+        <div class="discover-card-name">Acceso al Hogar</div>
+        <div class="discover-card-cta">Explorar →</div>
+      </a>
+      <a href="piscina-spa.html" class="discover-card">
+        <div class="discover-card-name">Piscina y Spa</div>
+        <div class="discover-card-cta">Explorar →</div>
+      </a>
+      <a href="salud-bienestar.html" class="discover-card">
+        <div class="discover-card-name">Salud y Bienestar</div>
+        <div class="discover-card-cta">Explorar →</div>
+      </a>
+      <a href="todo-lo-demas.html" class="discover-card">
+        <div class="discover-card-name">Todo lo Demás</div>
+        <div class="discover-card-cta">Explorar →</div>
+      </a>
+    </div>
+    <div class="slider-nav">
+      <button class="slider-btn" onclick="slideLeft('discoverSlider')">←</button>
+      <button class="slider-btn" onclick="slideRight('discoverSlider')">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- APP CTA -->
+<section class="app-cta">
+  <div class="app-cta-text">
+    <h3>Controlá la iluminación desde donde estés.</h3>
+    <p>La app Crestron Home está disponible en iOS y Android. Algunas integraciones y compatibilidades dependen de la región y del proyecto.</p>
+    <div class="app-badges">
+      <a href="https://apps.apple.com/us/app/crestron-home/id1466827669" target="_blank" class="app-badge">🍎 App Store</a>
+      <a href="https://play.google.com/store/apps/details?id=com.crestron.crestronhome" target="_blank" class="app-badge">▶ Google Play</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Productos</h4>
+      <ul>
+        <li><a href="iluminacion.html">Iluminación</a></li>
+        <li><a href="horizon.html">Horizon® Keypad</a></li>
+        <li><a href="cameo.html">Cameo® Keypad</a></li>
+        <li><a href="persianas.html">Persianas y Estores</a></li>
+        <li><a href="termostatos.html">Termostatos</a></li>
+        <li><a href="acceso-hogar.html">Acceso al Hogar</a></li>
+        <li><a href="audio.html">Audio</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="controladores.html">Controladores</a></li>
+        <li><a href="piscina-spa.html">Piscina y Spa</a></li>
+        <li><a href="salud-bienestar.html">Salud y Bienestar</a></li>
+        <li><a href="todo-lo-demas.html">Todo lo Demás</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Soporte</h4>
+      <ul>
+        <li><a href="#">Encontrar un Dealer</a></li>
+        <li><a href="#">Soporte Técnico</a></li>
+        <li><a href="#">Documentación</a></li>
+        <li><a href="#">Actualizaciones de Software</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#">Acerca de Crestron</a></li>
+        <li><a href="#">Prensa</a></li>
+        <li><a href="#">Carreras</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>App Móvil</h4>
+      <div class="footer-app-btns">
+        <a href="https://apps.apple.com/us/app/crestron-home/id1466827669" target="_blank" class="footer-app-btn">🍎 App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.crestron.crestronhome" target="_blank" class="footer-app-btn">▶ Google Play</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 Crestron Electronics, Inc. Todos los derechos reservados.</p>
+    <div class="footer-links">
+      <a href="#">Privacidad</a>
+      <a href="#">Términos de Uso</a>
+      <a href="#">Accesibilidad</a>
+    </div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+</body>
+</html>

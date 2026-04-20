@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piscina y Spa — Crestron Home®</title>
+  <meta name="description" content="Control inteligente de piscina y spa con Crestron Home. Temperatura del agua, iluminación, bombas y cobertor motorizado desde tu smartphone.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-left">
+    <button class="menu-btn" onclick="openMenu()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="6" width="6" height="6"/><rect x="11" y="6" width="6" height="6"/>
+        <rect x="3" y="14" width="6" height="6"/><rect x="11" y="14" width="6" height="6"/>
+      </svg>
+      MENÚ
+    </button>
+    <a href="index.html" class="logo">CRESTRON <span>HOME</span>®</a>
+  </div>
+  <div class="navbar-right">
+    <a href="#">Blog</a><a href="#">Ayuda</a>
+    <button class="btn-download" onclick="window.open('https://apps.apple.com/us/app/crestron-home/id1466827669')">Descargar App</button>
+  </div>
+</nav>
+
+<div class="mega-menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+<div class="mega-menu" id="megaMenu">
+  <button class="menu-close" onclick="closeMenu()">✕</button>
+  <div class="menu-section"><h4>Experiencia</h4><ul>
+    <li><a href="index.html">Crestron Home OS</a></li>
+    <li><a href="controladores.html">Tú Tienes el Control</a></li>
+  </ul></div>
+  <div class="menu-section"><h4>Productos</h4><ul>
+    <li><a href="iluminacion.html">Iluminación</a></li>
+    <li><a href="persianas.html">Persianas y Estores</a></li>
+    <li><a href="termostatos.html">Termostatos</a></li>
+    <li><a href="acceso-hogar.html">Acceso al Hogar</a></li>
+    <li><a href="audio.html">Audio</a></li>
+    <li><a href="video.html">Video</a></li>
+    <li><a href="controladores.html">Controladores</a></li>
+    <li><a href="piscina-spa.html">Piscina y Spa</a></li>
+    <li><a href="salud-bienestar.html">Salud y Bienestar</a></li>
+    <li><a href="todo-lo-demas.html">Todo lo Demás</a></li>
+  </ul></div>
+</div>
+
+<nav class="page-breadcrumb" aria-label="Migas de pan">
+  <a href="index.html">Inicio</a>
+  <span aria-hidden="true">/</span>
+  <span>Piscina y Spa</span>
+</nav>
+
+<!-- TABS (Pool / Spa) -->
+<div class="use-case-tabs">
+  <a href="#piscina" class="use-case-tab active">Piscina</a>
+  <a href="#spa" class="use-case-tab">Spa</a>
+</div>
+
+<!-- HERO SPLIT -->
+<section class="hero-split" style="padding-top:0">
+  <div class="hero-left">
+    <p class="supertitle">Crestron Home® — Piscina y Spa</p>
+    <h1 class="hero-title">Tu oasis,<br>perfectamente<br>preparado.</h1>
+    <button class="scroll-btn" onclick="document.getElementById('intro').scrollIntoView({behavior:'smooth'})">↓</button>
+  </div>
+  <div class="hero-right">
+    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/pool-hero.jpg"
+         alt="Piscina con control inteligente Crestron"
+         onerror="this.style.background='#1a3a5c';this.removeAttribute('src')">
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section-intro" id="intro">
+  <div class="section-intro-left">
+    <h2 class="section-title">El agua a la<br>temperatura<br>perfecta.</h2>
+  </div>
+  <div class="section-intro-right">
+    <p class="section-body">Imagina llegar a casa un viernes por la tarde y que la piscina ya esté calentada a 28°C, la iluminación submarina creando una atmósfera mágica y la música del exterior sonando suavemente. Crestron Home lo hace posible.</p>
+    <p class="section-body" style="margin-top:20px">Controla bombas, filtros, sistema de calefacción, iluminación, cobertor motorizado y sistema de cloro desde la app o con programaciones automáticas. Compatible con los principales sistemas de control de piscina del mercado.</p>
+    <a href="#productos" class="see-products-btn">Ver productos →</a>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section">
+  <p class="features-section-title" id="piscina">Control total del área acuática</p>
+  <div class="features-grid">
+    <div class="feature-item">
+      <div class="feature-title">Control de temperatura</div>
+      <p class="feature-body">Programa la temperatura del agua según el horario. La piscina siempre estará lista cuando la necesites, sin desperdiciar energía.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Iluminación RGB submarina</div>
+      <p class="feature-body">Control completo de la iluminación LED submarina. Cambia colores y crea escenas lumínicas para fiestas, noches románticas o natación nocturna.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Gestión de bombas y filtros</div>
+      <p class="feature-body">Automatiza los ciclos de filtrado según el horario de uso y los parámetros de calidad del agua. Mayor limpieza con menor consumo energético.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title" id="spa">Cobertor motorizado</div>
+      <p class="feature-body">Abre y cierra el cobertor de piscina con un toque. Incluye seguros de seguridad para protección de niños y mascotas.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Spa y jacuzzi integrado</div>
+      <p class="feature-body">Control de temperatura, jets, aromaterapia y cromoterapia del spa desde la app. Precalienta el jacuzzi antes de llegar a casa.</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-title">Alertas y seguridad</div>
+      <p class="feature-body">Recibe notificaciones si el nivel de cloro está fuera de rango, si el cobertor está abierto, o si se detecta movimiento en el área de la piscina.</p>
+    </div>
+  </div>
+</section>
+
+<img class="fullwidth-image"
+     src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/pool-night.jpg"
+     alt="Piscina iluminada por la noche con Crestron"
+     onerror="this.style.background='#0a1a2a';this.removeAttribute('src')">
+
+<!-- PRODUCTS -->
+<section class="products-section" id="productos">
+  <div class="products-header">
+    <h2>Productos para Piscina y Spa</h2>
+  </div>
+
+  <p class="product-category-label">Interfaces de Control Exterior</p>
+  <div class="product-cards-row">
+    <a href="https://www.crestron.com/Products/Control-Hardware-Software" target="_blank" class="product-card">
+      <img class="product-card-img"
+           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/pool-interface.jpg"
+           alt="Pool Control Interface"
+           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
+      <div class="product-card-body">
+        <div class="product-card-name">CS-POOL-CTRL</div>
+        <div class="product-card-desc">Módulo de control para sistemas de piscina. Compatible con Pentair, Hayward, Jandy y los principales fabricantes de equipos de piscina.</div>
+        <div class="product-card-cta">Ver más →</div>
+      </div>
+    </a>
+    <a href="https://www.crestron.com/Products/Control-Surfaces" target="_blank" class="product-card">
+      <img class="product-card-img"
+           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/outdoor-touchscreen.jpg"
+           alt="Outdoor Touchscreen"
+           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
+      <div class="product-card-body">
+        <div class="product-card-name">TS-770-OUT</div>
+        <div class="product-card-desc">Panel táctil de 7 pulgadas para exterior. Resistente al agua (IP65), altas temperaturas y luz solar directa. Control completo desde la terraza.</div>
+        <div class="product-card-cta">Ver más →</div>
+      </div>
+    </a>
+    <a href="https://www.crestron.com/Products/Control-Hardware-Software" target="_blank" class="product-card">
+      <img class="product-card-img"
+           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/relay-module.jpg"
+           alt="Relay Module"
+           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
+      <div class="product-card-body">
+        <div class="product-card-name">CLX-8RELAY</div>
+        <div class="product-card-desc">Módulo de 8 relés para control de bombas, filtros, cobertores y sistemas de iluminación exterior. Instalación en panel eléctrico estándar.</div>
+        <div class="product-card-cta">Ver más →</div>
+      </div>
+    </a>
+  </div>
+
+  <p class="product-category-label">Audio y Entretenimiento Exterior</p>
+  <div class="product-cards-row">
+    <a href="https://www.crestron.com/Products/Audio/Speakers" target="_blank" class="product-card">
+      <img class="product-card-img"
+           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/procise-outdoor.jpg"
+           alt="Procise Outdoor"
+           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
+      <div class="product-card-body">
+        <div class="product-card-name">Procise® Outdoor</div>
+        <div class="product-card-desc">Altavoces para exterior certificados para uso en zonas de piscina. Resistencia total al agua y a los productos de limpieza de piscinas.</div>
+        <div class="product-card-cta">Ver más →</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- DISCOVER MORE -->
+<section class="discover-section">
+  <h2>Descubrir más categorías</h2>
+  <div class="discover-slider-wrapper">
+    <div class="discover-slider" id="discoverSlider">
+      <a href="iluminacion.html" class="discover-card"><div class="discover-card-name">Iluminación</div><div class="discover-card-cta">Explorar →</div></a>
+      <a href="persianas.html" class="discover-card"><div class="discover-card-name">Persianas</div><div class="discover-card-cta">Explorar →</div></a>
+      <a href="termostatos.html" class="discover-card"><div class="discover-card-name">Termostatos</div><div class="discover-card-cta">Explorar →</div></a>
+      <a href="audio.html" class="discover-card"><div class="discover-card-name">Audio</div><div class="discover-card-cta">Explorar →</div></a>
+      <a href="video.html" class="discover-card"><div class="discover-card-name">Video</div><div class="discover-card-cta">Explorar →</div></a>
+      <a href="controladores.html" class="discover-card"><div class="discover-card-name">Controladores</div><div class="discover-card-cta">Explorar →</div></a>
+      <a href="salud-bienestar.html" class="discover-card"><div class="discover-card-name">Salud y Bienestar</div><div class="discover-card-cta">Explorar →</div></a>
+      <a href="todo-lo-demas.html" class="discover-card"><div class="discover-card-name">Todo lo Demás</div><div class="discover-card-cta">Explorar →</div></a>
+    </div>
+    <div class="slider-nav">
+      <button class="slider-btn" onclick="slideLeft('discoverSlider')">←</button>
+      <button class="slider-btn" onclick="slideRight('discoverSlider')">→</button>
+    </div>
+  </div>
+</section>
+
+<section class="app-cta">
+  <div class="app-cta-text">
+    <h3>Precalienta tu piscina antes de llegar a casa.</h3>
+    <p>La app Crestron Home es gratuita. Disponible en iOS y Android.</p>
+    <div class="app-badges">
+      <a href="https://apps.apple.com/us/app/crestron-home/id1466827669" target="_blank" class="app-badge">🍎 App Store</a>
+      <a href="https://play.google.com/store/apps/details?id=com.crestron.crestronhome" target="_blank" class="app-badge">▶ Google Play</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col"><h4>Productos</h4><ul>
+      <li><a href="iluminacion.html">Iluminación</a></li><li><a href="persianas.html">Persianas y Estores</a></li>
+      <li><a href="termostatos.html">Termostatos</a></li><li><a href="acceso-hogar.html">Acceso al Hogar</a></li>
+      <li><a href="audio.html">Audio</a></li><li><a href="video.html">Video</a></li>
+      <li><a href="controladores.html">Controladores</a></li><li><a href="piscina-spa.html">Piscina y Spa</a></li>
+      <li><a href="salud-bienestar.html">Salud y Bienestar</a></li><li><a href="todo-lo-demas.html">Todo lo Demás</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Soporte</h4><ul>
+      <li><a href="#">Encontrar un Dealer</a></li><li><a href="#">Soporte Técnico</a></li><li><a href="#">Documentación</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Empresa</h4><ul>
+      <li><a href="#">Acerca de Crestron</a></li><li><a href="#">Carreras</a></li><li><a href="#">Contacto</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>App Móvil</h4>
+      <div class="footer-app-btns">
+        <a href="https://apps.apple.com/us/app/crestron-home/id1466827669" target="_blank" class="footer-app-btn">🍎 App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.crestron.crestronhome" target="_blank" class="footer-app-btn">▶ Google Play</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 Crestron Electronics, Inc. Todos los derechos reservados.</p>
+    <div class="footer-links"><a href="#">Privacidad</a><a href="#">Términos de Uso</a><a href="#">Accesibilidad</a></div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+</body>
+</html>
