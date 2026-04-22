@@ -66,3 +66,13 @@
   from = "/cameo"
   to = "/cameo.html"
   status = 200
+
+[[redirects]]
+  from = "/crestron-home-os.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/crestron-home-os"
+  to = "/"
+  status = 301

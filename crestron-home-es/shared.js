@@ -18,6 +18,77 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeMenu();
 });
 
+/** Titular del home con rotación tipo máquina de escribir (index.html) */
+function initHomeHeroHeadlineRotator() {
+  const el = document.getElementById('homeHeroTypedText');
+  const wrap = document.getElementById('homeHeroHeadline');
+  if (!el || !wrap) return;
+
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const items = [
+    'Explorá tu hogar reinventado con Crestron Home OS',
+    'Descubrí la experiencia Crestron Home OS',
+    'Tu casa inteligente comienza con Crestron Home OS',
+  ];
+
+  const escapeHtml = (value) => value
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+
+  const renderTyped = (full, charCount) => {
+    const typed = full.slice(0, Math.max(0, Math.min(charCount, full.length)));
+    el.innerHTML = escapeHtml(typed).replace(/\r?\n/g, '<br>');
+  };
+
+  if (prefersReduced) {
+    let current = 0;
+    renderTyped(items[current], items[current].length);
+    setInterval(() => {
+      current = (current + 1) % items.length;
+      renderTyped(items[current], items[current].length);
+    }, 4800);
+    return;
+  }
+
+  const typingDelay = 48;
+  const deletingDelay = 32;
+  const holdWhenFull = 2200;
+  const holdWhenEmpty = 400;
+  let current = 0;
+  let charCount = 0;
+  let direction = 1;
+
+  const tick = () => {
+    const full = items[current];
+    charCount += direction;
+    if (charCount < 0) charCount = 0;
+    if (charCount > full.length) charCount = full.length;
+    renderTyped(full, charCount);
+    wrap.classList.toggle('is-typing', charCount > 0 && charCount < full.length);
+
+    if (direction === 1 && charCount === full.length) {
+      direction = -1;
+      wrap.classList.remove('is-typing');
+      setTimeout(tick, holdWhenFull);
+      return;
+    }
+    if (direction === -1 && charCount === 0) {
+      current = (current + 1) % items.length;
+      direction = 1;
+      setTimeout(tick, holdWhenEmpty);
+      return;
+    }
+    setTimeout(tick, direction === 1 ? typingDelay : deletingDelay);
+  };
+
+  renderTyped(items[0], 0);
+  wrap.classList.add('is-typing');
+  setTimeout(tick, 260);
+}
+
 function syncHorizonKeypadLayoutClass() {
   const preview = document.getElementById('horizonFinishPreview');
   const wrap = document.getElementById('horizonKeypadInteractive');
@@ -349,6 +420,7 @@ function initCameoConfigHighlightRotator() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  initHomeHeroHeadlineRotator();
   initHorizonFinishSelector();
   initHorizonKeypadInteractive();
   initHorizonConfigHighlightRotator();
