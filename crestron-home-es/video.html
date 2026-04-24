@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Video — Crestron Home®</title>
-  <meta name="description" content="Distribución de video 4K con Crestron Home. Cine en casa, distribución de contenido y experiencias audiovisuales inmersivas.">
+  <meta name="description" content="Video residencial con Crestron Home: distribución multiroom, home cinema y selección instantánea de fuentes con calidad premium.">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -30,10 +30,9 @@
 
 <div class="mega-menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
 <div class="mega-menu" id="megaMenu">
-  <button class="menu-close" onclick="closeMenu()">✕</button>
+  <button class="menu-close" type="button" onclick="closeMenu()" aria-label="Cerrar menú"><span class="menu-close__glyph" aria-hidden="true">×</span></button>
   <div class="menu-section"><h4>Experiencia</h4><ul>
     <li><a href="index.html">Crestron Home OS</a></li>
-    <li><a href="controladores.html">Tú Tienes el Control</a></li>
   </ul></div>
   <div class="menu-section"><h4>Productos</h4><ul>
     <li><a href="iluminacion.html">Iluminación</a></li>
@@ -42,7 +41,8 @@
     <li><a href="acceso-hogar.html">Acceso al Hogar</a></li>
     <li><a href="audio.html">Audio</a></li>
     <li><a href="video.html">Video</a></li>
-    <li><a href="controladores.html">Controladores</a></li>
+  </ul></div>
+  <div class="menu-section"><h4>Casos de uso</h4><ul>
     <li><a href="piscina-spa.html">Piscina y Spa</a></li>
     <li><a href="salud-bienestar.html">Salud y Bienestar</a></li>
     <li><a href="todo-lo-demas.html">Todo lo Demás</a></li>
@@ -56,135 +56,131 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero-split">
+<section class="hero-split hero-split--compact">
   <div class="hero-left">
     <p class="supertitle">Crestron Home® — Video</p>
-    <h1 class="hero-title">Imagen<br>perfecta,<br>dondequiera.</h1>
+    <h1 class="hero-title hero-typed hero-typed--video" id="videoHeroHeadline" aria-live="off">
+      <span id="videoHeroTypedText"></span><span class="hero-cursor" aria-hidden="true"></span>
+    </h1>
+    <p class="hero-subcopy">Distribución visual impecable para cine, deportes y gaming con una experiencia de control unificada en toda la casa.</p>
     <button class="scroll-btn" onclick="document.getElementById('intro').scrollIntoView({behavior:'smooth'})">↓</button>
   </div>
   <div class="hero-right">
-    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/video-hero-cinema.jpg"
+    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-video-hero.jpg"
          alt="Sala de cine en casa con Crestron"
+         width="1600" height="900" loading="eager" decoding="async"
          onerror="this.style.background='#111111';this.removeAttribute('src')">
   </div>
 </section>
 
 <!-- INTRO -->
-<section class="section-intro" id="intro">
-  <div class="section-intro-left">
-    <h2 class="section-title">Video 4K en<br>cada pantalla.</h2>
+<section class="video-intro" id="intro" aria-labelledby="video-intro-title">
+  <div class="video-intro__head">
+    <div>
+      <p class="video-intro__kicker">Producto · Video</p>
+      <h2 class="video-intro__title" id="video-intro-title">Video sin fricción para cada ambiente</h2>
+    </div>
+    <img class="video-intro__icon" src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/icon2_video.svg" alt="" aria-hidden="true" width="64" height="64">
   </div>
-  <div class="section-intro-right">
-    <p class="section-body">Distribuye contenido de video en ultra alta definición a cualquier pantalla de tu hogar. Desde el home theater más sofisticado hasta la pequeña pantalla de la cocina — Crestron Home lo hace posible con una calidad sin compromiso.</p>
-    <p class="section-body" style="margin-top:20px">Compatible con HDMI 2.1, HDR10+, Dolby Vision y 8K. Sistemas de distribución de video HD-MD y DM® que permiten enviar señales a largas distancias sin pérdida de calidad.</p>
-    <a href="#productos" class="see-products-btn">Ver productos →</a>
+  <div class="video-intro__grid">
+    <div class="video-intro__columns">
+      <p>El ecosistema audiovisual actual crece en complejidad con cada consola, app y plataforma. Crestron ordena ese entorno para que cambiar de fuente, sala o contenido sea instantáneo.</p>
+      <p>Con DigitalMedia y la lógica de escenas de Crestron Home, conseguís señal estable, selección fluida y sincronía total entre video, audio, iluminación y persianas.</p>
+    </div>
+    <div class="video-intro__quote">
+      <strong>Calidad de referencia y control de una sola capa.</strong>
+      <p>Una experiencia consistente desde el cine principal hasta TVs secundarios o displays táctiles.</p>
+    </div>
   </div>
+  <a href="#video-lab" class="see-products-btn video-intro__cta">Probar enrutador de video →</a>
 </section>
 
 <!-- FEATURES -->
 <section class="features-section">
-  <p class="features-section-title">La experiencia de cine en tu hogar</p>
+  <p class="features-section-title">Una plataforma visual pensada para uso real</p>
   <div class="features-grid">
     <div class="feature-item">
-      <div class="feature-title">Distribución 4K/8K</div>
-      <p class="feature-body">Envía señales de video 4K HDR a múltiples pantallas simultáneamente con la tecnología de distribución DigitalMedia™ de Crestron.</p>
+      <div class="feature-title">Conmutación instantánea</div>
+      <p class="feature-body">Pasá de consola a streaming o TV en vivo con transiciones limpias y una interfaz unificada para todos los usuarios del hogar.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Home Theater integrado</div>
-      <p class="feature-body">Control total del proyector, pantalla motorizada, iluminación, persianas y audio del home theater desde una sola interfaz.</p>
+      <div class="feature-title">Escenas de cine coordinadas</div>
+      <p class="feature-body">Un toque activa proyector, pantalla, audio, luces y persianas para crear una atmósfera cinematográfica completa.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Múltiples fuentes</div>
-      <p class="feature-body">Gestiona Apple TV, Netflix, Blu-ray, consolas de videojuegos y cualquier fuente HDMI. Cambio de fuente instantáneo y sin complicaciones.</p>
+      <div class="feature-title">Multiroom de alto nivel</div>
+      <p class="feature-body">Distribuí distintas fuentes a múltiples pantallas o replicá el mismo evento en toda la casa con consistencia visual.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Escenas de cine</div>
-      <p class="feature-body">Un solo toque activa la escena "Película": se apagan las luces, bajan las persianas, se enciende el proyector y el sonido envolvente se ajusta.</p>
+      <div class="feature-title">Gaming y deportes sin caos</div>
+      <p class="feature-body">Seleccioná juego, liga o torneo por ambiente sin depender de múltiples controles y sin perder continuidad de señal.</p>
     </div>
     <div class="feature-item">
       <div class="feature-title">Videovigilancia integrada</div>
-      <p class="feature-body">Visualiza las cámaras de seguridad de tu hogar en cualquier pantalla, desde el televisor de la sala hasta el panel del dormitorio.</p>
+      <p class="feature-body">Mostrá cámaras en TVs o paneles táctiles para supervisar accesos sin salir de la experiencia principal de video.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Pantallas táctiles 4K</div>
-      <p class="feature-body">Las interfaces TS-770 y TS-1070 de Crestron sirven tanto como panel de control como como pantallas para streaming de contenido local.</p>
+      <div class="feature-title">Escalabilidad real</div>
+      <p class="feature-body">Desde una sala hasta una casa completa, la arquitectura mantiene orden, rendimiento y confiabilidad en el tiempo.</p>
     </div>
   </div>
 </section>
 
 <img class="fullwidth-image"
-     src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/video-theater-room.jpg"
+     src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-video-consoles.jpg"
      alt="Home theater premium con Crestron"
+     width="1920" height="1013" loading="lazy" decoding="async"
      onerror="this.style.background='#111111';this.removeAttribute('src')">
 
-<!-- PRODUCTS -->
-<section class="products-section" id="productos">
-  <div class="products-header">
-    <h2>Productos de Video</h2>
+<section class="video-lab" id="video-lab" aria-labelledby="video-lab-title">
+  <div class="video-lab__inner">
+    <div class="video-lab__left">
+      <p class="video-lab__kicker">Interactivo Crestron</p>
+      <h2 id="video-lab-title">Router visual por ambientes</h2>
+      <p>Elegí una fuente y visualizá en tiempo real qué pantalla la está recibiendo. Diseñado para demostrar la lógica de distribución de video multiroom.</p>
+      <div class="video-lab__buttons" role="group" aria-label="Fuentes de video">
+        <button type="button" class="video-source-btn is-active" data-video-source="cine">Apple TV · Cine</button>
+        <button type="button" class="video-source-btn" data-video-source="deportes">Deportes en vivo</button>
+        <button type="button" class="video-source-btn" data-video-source="gaming">Consola · Gaming</button>
+        <button type="button" class="video-source-btn" data-video-source="camaras">Cámaras</button>
+      </div>
+      <div class="video-lab__status">
+        <span class="video-lab__status-label">Ruta activa</span>
+        <strong id="videoRouteName">Apple TV · Cine</strong>
+        <span id="videoRouteMeta">Home Theater principal + sala familiar sincronizada</span>
+      </div>
+    </div>
+    <div class="video-lab__right" aria-live="polite" aria-atomic="true">
+      <div class="video-node">
+        <span>Home Theater</span>
+        <strong id="videoNodeTheater">Cine · Dolby Vision</strong>
+      </div>
+      <div class="video-node">
+        <span>TV Sala</span>
+        <strong id="videoNodeLiving">Cine · Espejo</strong>
+      </div>
+      <div class="video-node">
+        <span>Suite</span>
+        <strong id="videoNodeSuite">Sin señal</strong>
+      </div>
+      <div class="video-node">
+        <span>Cocina</span>
+        <strong id="videoNodeKitchen">Sin señal</strong>
+      </div>
+    </div>
   </div>
+</section>
 
-  <p class="product-category-label">Distribución de Video DigitalMedia™</p>
-  <div class="product-cards-row">
-    <a href="https://www.crestron.com/Products/Video/Video-Distribution" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/hd-md400.jpg"
-           alt="HD-MD400"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">HD-MD400-CE</div>
-        <div class="product-card-desc">Switcher HDMI 4x2 con escalado automático. Distribución de video HD hasta 1080p con audio de alta calidad.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-    <a href="https://www.crestron.com/Products/Video/Video-Distribution" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/dm-md8x8.jpg"
-           alt="DM-MD8X8"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">DM-MD8X8</div>
-        <div class="product-card-desc">Matriz de distribución DigitalMedia™ 8x8. Soporte para 4K UHD, HDR10 y Dolby Vision en todas las salidas simultáneamente.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-    <a href="https://www.crestron.com/Products/Video/Video-Distribution" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/dm-nvx.jpg"
-           alt="DM NVX"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">DM NVX® 4K60</div>
-        <div class="product-card-desc">Transmisor/receptor de video por red IP. Distribución de 4K60 4:4:4 sobre una red estándar de 1Gbps sin compresión visible.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-  </div>
+<section class="fullwidth-video" aria-label="Distribución de video Crestron en acción">
+  <video autoplay muted loop playsinline preload="metadata" disablepictureinpicture
+         poster="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-video-watch2.png">
+    <source src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-video-video.mp4" type="video/mp4">
+  </video>
+</section>
 
-  <p class="product-category-label">Pantallas Táctiles</p>
-  <div class="product-cards-row">
-    <a href="https://www.crestron.com/Products/Control-Surfaces/Touch-Screens" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/ts-770.jpg"
-           alt="TS-770"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">TS-770</div>
-        <div class="product-card-desc">Pantalla táctil de 7 pulgadas con resolución HD. Control de AV, iluminación, climatización y acceso desde una sola interfaz.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-    <a href="https://www.crestron.com/Products/Control-Surfaces/Touch-Screens" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/ts-1070.jpg"
-           alt="TS-1070"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">TS-1070</div>
-        <div class="product-card-desc">Pantalla táctil de 10 pulgadas con diseño premium. La interfaz definitiva para el control completo del hogar Crestron.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-  </div>
+<section class="shading-fullbleed-caption" aria-labelledby="video-caption-title">
+  <h2 id="video-caption-title">Todo el sistema responde como uno</h2>
+  <p>Crestron Home integra señal, control y automatización para que mirar contenido sea simple, consistente y de calidad profesional en cualquier habitación.</p>
 </section>
 
 <!-- DISCOVER MORE -->
@@ -196,7 +192,6 @@
       <a href="persianas.html" class="discover-card"><div class="discover-card-name">Persianas</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="termostatos.html" class="discover-card"><div class="discover-card-name">Termostatos</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="audio.html" class="discover-card"><div class="discover-card-name">Audio</div><div class="discover-card-cta">Explorar →</div></a>
-      <a href="controladores.html" class="discover-card"><div class="discover-card-name">Controladores</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="acceso-hogar.html" class="discover-card"><div class="discover-card-name">Acceso al Hogar</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="piscina-spa.html" class="discover-card"><div class="discover-card-name">Piscina y Spa</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="salud-bienestar.html" class="discover-card"><div class="discover-card-name">Salud y Bienestar</div><div class="discover-card-cta">Explorar →</div></a>
@@ -213,8 +208,8 @@
     <h3>Tu cine en casa, controlado desde el sofá.</h3>
     <p>La app Crestron Home es gratuita. Disponible en iOS y Android.</p>
     <div class="app-badges">
-      <a href="https://apps.apple.com/us/app/crestron-home/id1466827669" target="_blank" class="app-badge">🍎 App Store</a>
-      <a href="https://play.google.com/store/apps/details?id=com.crestron.crestronhome" target="_blank" class="app-badge">▶ Google Play</a>
+      <a href="https://apps.apple.com/us/app/crestron-home/id1466827669" target="_blank" rel="noopener noreferrer" class="app-badge">🍎 App Store</a>
+      <a href="https://play.google.com/store/apps/details?id=com.crestron.crestronhome" target="_blank" rel="noopener noreferrer" class="app-badge">▶ Google Play</a>
     </div>
   </div>
 </section>
@@ -225,7 +220,7 @@
       <li><a href="iluminacion.html">Iluminación</a></li><li><a href="persianas.html">Persianas y Estores</a></li>
       <li><a href="termostatos.html">Termostatos</a></li><li><a href="acceso-hogar.html">Acceso al Hogar</a></li>
       <li><a href="audio.html">Audio</a></li><li><a href="video.html">Video</a></li>
-      <li><a href="controladores.html">Controladores</a></li><li><a href="piscina-spa.html">Piscina y Spa</a></li>
+      <li><a href="piscina-spa.html">Piscina y Spa</a></li>
       <li><a href="salud-bienestar.html">Salud y Bienestar</a></li><li><a href="todo-lo-demas.html">Todo lo Demás</a></li>
     </ul></div>
     <div class="footer-col"><h4>Soporte</h4><ul>
@@ -236,8 +231,8 @@
     </ul></div>
     <div class="footer-col"><h4>App Móvil</h4>
       <div class="footer-app-btns">
-        <a href="https://apps.apple.com/us/app/crestron-home/id1466827669" target="_blank" class="footer-app-btn">🍎 App Store</a>
-        <a href="https://play.google.com/store/apps/details?id=com.crestron.crestronhome" target="_blank" class="footer-app-btn">▶ Google Play</a>
+        <a href="https://apps.apple.com/us/app/crestron-home/id1466827669" target="_blank" rel="noopener noreferrer" class="footer-app-btn">🍎 App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.crestron.crestronhome" target="_blank" rel="noopener noreferrer" class="footer-app-btn">▶ Google Play</a>
       </div>
     </div>
   </div>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Acceso al Hogar — Crestron Home®</title>
-  <meta name="description" content="Control de acceso inteligente Crestron Home. Cerraduras, intercomunicadores, videoporteros y seguridad integrada para tu residencia.">
+  <meta name="description" content="Acceso al hogar con Crestron Home: cerraduras, estaciones de puerta, alarmas y monitoreo remoto en una sola experiencia de seguridad residencial.">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -30,10 +30,9 @@
 
 <div class="mega-menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
 <div class="mega-menu" id="megaMenu">
-  <button class="menu-close" onclick="closeMenu()">✕</button>
+  <button class="menu-close" type="button" onclick="closeMenu()" aria-label="Cerrar menú"><span class="menu-close__glyph" aria-hidden="true">×</span></button>
   <div class="menu-section"><h4>Experiencia</h4><ul>
     <li><a href="index.html">Crestron Home OS</a></li>
-    <li><a href="controladores.html">Tú Tienes el Control</a></li>
   </ul></div>
   <div class="menu-section"><h4>Productos</h4><ul>
     <li><a href="iluminacion.html">Iluminación</a></li>
@@ -42,7 +41,8 @@
     <li><a href="acceso-hogar.html">Acceso al Hogar</a></li>
     <li><a href="audio.html">Audio</a></li>
     <li><a href="video.html">Video</a></li>
-    <li><a href="controladores.html">Controladores</a></li>
+  </ul></div>
+  <div class="menu-section"><h4>Casos de uso</h4><ul>
     <li><a href="piscina-spa.html">Piscina y Spa</a></li>
     <li><a href="salud-bienestar.html">Salud y Bienestar</a></li>
     <li><a href="todo-lo-demas.html">Todo lo Demás</a></li>
@@ -56,135 +56,128 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero-split">
+<section class="hero-split hero-split--compact">
   <div class="hero-left">
     <p class="supertitle">Crestron Home® — Acceso al Hogar</p>
-    <h1 class="hero-title">Tu hogar,<br>seguro y<br>bienvenido.</h1>
-    <button class="scroll-btn" onclick="document.getElementById('intro').scrollIntoView({behavior:'smooth'})">↓</button>
+    <h1 class="hero-title home-hero-typed hero-typed--acceso" id="accesoHeroHeadline">
+      <span id="accesoHeroTypedText" aria-live="polite"></span><span class="home-hero-typed-caret" aria-hidden="true"></span>
+    </h1>
+    <p class="hero-subcopy">Cada puerta, portón y punto de ingreso se coordina en una sola experiencia segura, clara y siempre disponible.</p>
+    <button type="button" class="scroll-btn" onclick="document.getElementById('intro').scrollIntoView({behavior:'smooth'})" aria-label="Ir al contenido">↓</button>
   </div>
   <div class="hero-right">
-    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/access-door-hero.jpg"
-         alt="Entrada de hogar con control de acceso Crestron"
+    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-home-access-door-station.jpg"
+         alt="Entrada residencial con estación de puerta y control de acceso"
+         width="1600" height="1154" loading="eager" decoding="async"
          onerror="this.style.background='#CCCCCC';this.removeAttribute('src')">
   </div>
 </section>
 
 <!-- INTRO -->
-<section class="section-intro" id="intro">
-  <div class="section-intro-left">
-    <h2 class="section-title">Acceso inteligente<br>a tu mundo.</h2>
-  </div>
-  <div class="section-intro-right">
-    <p class="section-body">Gestiona el acceso a tu hogar con total seguridad y comodidad. Videoporteros HD, cerraduras inteligentes, intercomunicadores y cámaras de seguridad — todo integrado en el sistema Crestron Home.</p>
-    <p class="section-body" style="margin-top:20px">Cuando alguien llama al timbre, recibe una notificación en tu teléfono y visualiza la imagen en vivo, sin importar dónde estés. Abre la puerta con un toque o programa accesos temporales para visitas e invitados.</p>
-    <a href="#productos" class="see-products-btn">Ver productos →</a>
+<section class="acceso-intro" id="intro">
+  <div class="acceso-intro__inner">
+    <header class="acceso-intro__head">
+      <div>
+        <p class="acceso-intro__kicker">Seguridad residencial</p>
+        <h2 class="acceso-intro__title">Tranquilidad real,<br>puerta por puerta.</h2>
+      </div>
+      <img class="acceso-intro__icon" src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/icon2_locks.svg" alt="" width="72" height="72" loading="lazy" decoding="async">
+    </header>
+    <div class="acceso-intro__grid">
+      <p class="section-body">El mejor alivio es saber que tu casa está protegida para vos y tu familia. Crestron Home unifica seguridad, control de puertas y gestión de energía para sostener la operación del hogar incluso ante escenarios exigentes.</p>
+      <p class="section-body">Más que una animación en la app: el sistema confirma estados reales de puertas, portones y accesos. Desde un panel táctil o el teléfono, podés verificar, actuar y automatizar sin fricciones.</p>
+    </div>
+    <a href="#acceso-bloques" class="see-products-btn acceso-intro__cta">Explorar el sistema de acceso →</a>
   </div>
 </section>
 
-<!-- FEATURES -->
+<section class="shading-split" id="acceso-bloques" aria-labelledby="acceso-app-title">
+  <div class="shading-split__media">
+    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-home-access-app2.png"
+         alt="Estados de puertas y accesos en la app Crestron Home"
+         width="1200" height="1113" loading="lazy" decoding="async"
+         onerror="this.style.background='#ddd';this.removeAttribute('src')">
+  </div>
+  <div class="shading-split__body">
+    <p class="shading-split__kicker">Visibilidad total</p>
+    <h2 class="shading-split__title" id="acceso-app-title">Más que una interfaz atractiva</h2>
+    <p class="shading-split__text">La app Crestron Home muestra con precisión el estado de puertas, portones y garajes. Lo que ves representa el estado real del hogar para decidir con confianza en segundos.</p>
+  </div>
+</section>
+
+<section class="shading-split shading-split--reverse" aria-labelledby="acceso-alarma-title">
+  <div class="shading-split__media">
+    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-home-access-take-control.jpg"
+         alt="Control de alarmas desde panel táctil Crestron"
+         width="1200" height="1468" loading="lazy" decoding="async"
+         onerror="this.style.background='#ddd';this.removeAttribute('src')">
+  </div>
+  <div class="shading-split__body">
+    <p class="shading-split__kicker">Alarma y acceso</p>
+    <h2 class="shading-split__title" id="acceso-alarma-title">Control completo del sistema de alarma</h2>
+    <p class="shading-split__text">Armado, desarmado y monitoreo desde pantallas táctiles distribuidas por la casa o en forma remota desde el móvil. Seguridad consistente, sin depender de múltiples apps.</p>
+  </div>
+</section>
+
 <section class="features-section">
-  <p class="features-section-title">Seguridad y bienvenida integradas</p>
+  <p class="features-section-title">Acceso, seguridad y bienvenida en una sola plataforma</p>
   <div class="features-grid">
     <div class="feature-item">
-      <div class="feature-title">Videoportero HD</div>
-      <p class="feature-body">Visualiza quién está en la puerta en alta definición desde tu smartphone, tablet o panel táctil. Audio bidireccional en tiempo real.</p>
+      <div class="feature-title">Estado exacto de accesos</div>
+      <p class="feature-body">La app confirma posiciones reales de puertas, garajes y portones para reducir dudas operativas.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Cerraduras inteligentes</div>
-      <p class="feature-body">Abre, cierra y monitorea todas las cerraduras de tu hogar de forma remota. Compatible con las principales marcas del mercado.</p>
+      <div class="feature-title">Gestión de alarmas remota</div>
+      <p class="feature-body">Controlá el sistema de alarma desde paneles interiores o dispositivos móviles con la misma lógica de uso.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Accesos temporales</div>
-      <p class="feature-body">Crea códigos de acceso temporales para empleados domésticos, visitas o servicios. Los accesos expiran automáticamente.</p>
+      <div class="feature-title">Estaciones de puerta extendidas</div>
+      <p class="feature-body">Llevá el videoportero a pantallas táctiles de toda la casa y contestá también desde el teléfono.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Notificaciones en tiempo real</div>
-      <p class="feature-body">Recibe alertas inmediatas en tu smartphone cuando alguien llega, una puerta se abre o hay movimiento detectado.</p>
+      <div class="feature-title">Notificaciones relevantes</div>
+      <p class="feature-body">Eventos clave de acceso y seguridad en tiempo real para reaccionar rápido cuando corresponde.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Escenas de bienvenida</div>
-      <p class="feature-body">Al llegara casa, el sistema enciende las luces, ajusta la temperatura y reproduce tu música favorita — todo de forma automática.</p>
+      <div class="feature-title">Integración con energía y resiliencia</div>
+      <p class="feature-body">Seguridad y operación coordinadas con gestión energética para sostener continuidad ante contingencias.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Historial de accesos</div>
-      <p class="feature-body">Consulta un registro completo de quién entró y salió, a qué hora y desde qué dispositivo. Historial guardado en la nube de forma segura.</p>
+      <div class="feature-title">Escenas de llegada</div>
+      <p class="feature-body">Al entrar, podés disparar iluminación, climatización y audio como parte de una bienvenida automatizada.</p>
     </div>
+  </div>
+</section>
+
+<section class="access-timeline" id="acceso-lab" aria-labelledby="acceso-lab-title">
+  <div class="access-timeline__inner">
+    <p class="access-timeline__kicker">Interactivo Crestron</p>
+    <h2 id="acceso-lab-title">Bitácora inteligente de accesos</h2>
+    <p class="access-timeline__lead">Filtrá eventos por tipo y revisá en segundos qué pasó en cada punto de ingreso del hogar.</p>
+    <div class="access-timeline__filters" role="group" aria-label="Filtros de eventos">
+      <button type="button" class="access-filter-btn is-active" data-access-filter="all">Todos</button>
+      <button type="button" class="access-filter-btn" data-access-filter="door">Puertas</button>
+      <button type="button" class="access-filter-btn" data-access-filter="alarm">Alarma</button>
+      <button type="button" class="access-filter-btn" data-access-filter="intercom">Videoportero</button>
+    </div>
+    <ul class="access-timeline__list" id="accessEventList" aria-live="polite" aria-atomic="true">
+      <li><time>07:42</time><strong>Puerta principal</strong><span>Acceso autorizado por código temporal</span></li>
+      <li><time>09:15</time><strong>Videoportero</strong><span>Llamada atendida desde app móvil</span></li>
+      <li><time>12:03</time><strong>Alarma</strong><span>Perímetro rearmado automáticamente</span></li>
+      <li><time>18:21</time><strong>Portón</strong><span>Apertura remota desde pantalla táctil</span></li>
+    </ul>
   </div>
 </section>
 
 <img class="fullwidth-image"
-     src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/access-exterior.jpg"
-     alt="Exterior de hogar con seguridad Crestron"
+     src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-home-access-door-station.jpg"
+     alt="Extensión de estación de puerta a pantallas táctiles Crestron"
+     width="1600" height="1154" loading="lazy" decoding="async"
      onerror="this.style.background='#BBBBBB';this.removeAttribute('src')">
 
-<!-- PRODUCTS -->
-<section class="products-section" id="productos">
-  <div class="products-header">
-    <h2>Productos de Acceso al Hogar</h2>
-  </div>
-
-  <p class="product-category-label">Videoporteros y Estaciones de Puerta</p>
-  <div class="product-cards-row">
-    <a href="https://www.crestron.com/Products/Control-Surfaces/Door-Stations" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/ds-75hd.jpg"
-           alt="DS-75HD"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">DS-75HD</div>
-        <div class="product-card-desc">Estación de puerta con cámara HD 1080p, micrófono y altavoz integrados. Diseño robusto para exterior con protección IP55.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-    <a href="https://www.crestron.com/Products/Control-Surfaces/Door-Stations" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/ds-75hd-b.jpg"
-           alt="DS-75HD-B"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">DS-75HD-B</div>
-        <div class="product-card-desc">Versión en negro del videoportero DS-75HD. Idénticas prestaciones en un acabado más elegante para exteriores modernos.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-    <a href="https://www.crestron.com/Products/Control-Surfaces/Door-Stations" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/ds-350hd.jpg"
-           alt="DS-350HD"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">DS-350HD</div>
-        <div class="product-card-desc">Estación de puerta premium con pantalla táctil de 5 pulgadas, cámara 4K y lector de tarjetas NFC integrado.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-  </div>
-
-  <p class="product-category-label">Gateways y Controladores de Acceso</p>
-  <div class="product-cards-row">
-    <a href="https://www.crestron.com/Products/Control-Hardware-Software" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/cs-gw-t.jpg"
-           alt="CS-GW-T"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">CS-GW-T</div>
-        <div class="product-card-desc">Gateway de seguridad para integración de cerraduras, sensores de puerta y ventana con el sistema Crestron Home.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-    <a href="https://www.crestron.com/Products/Control-Hardware-Software" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/clx-1di4ro.jpg"
-           alt="CLX-1DI4RO"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">CLX-1DI4RO</div>
-        <div class="product-card-desc">Módulo de entradas digitales y relés de salida para control de puertas de garaje, portones y sistemas de control de acceso.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-  </div>
+<section class="shading-fullbleed-caption" aria-labelledby="acceso-door-title">
+  <h2 id="acceso-door-title">Estación de puerta en toda la casa</h2>
+  <p>Extendé la experiencia de videoportero a las pantallas táctiles interiores y al móvil para responder con contexto, desde cualquier ambiente.</p>
 </section>
 
 <!-- DISCOVER MORE -->
@@ -193,13 +186,13 @@
   <div class="discover-slider-wrapper">
     <div class="discover-slider" id="discoverSlider">
       <a href="iluminacion.html" class="discover-card"><div class="discover-card-name">Iluminación</div><div class="discover-card-cta">Explorar →</div></a>
-      <a href="persianas.html" class="discover-card"><div class="discover-card-name">Persianas</div><div class="discover-card-cta">Explorar →</div></a>
+      <a href="persianas.html" class="discover-card"><div class="discover-card-name">Persianas y Estores</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="termostatos.html" class="discover-card"><div class="discover-card-name">Termostatos</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="audio.html" class="discover-card"><div class="discover-card-name">Audio</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="video.html" class="discover-card"><div class="discover-card-name">Video</div><div class="discover-card-cta">Explorar →</div></a>
-      <a href="controladores.html" class="discover-card"><div class="discover-card-name">Controladores</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="piscina-spa.html" class="discover-card"><div class="discover-card-name">Piscina y Spa</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="salud-bienestar.html" class="discover-card"><div class="discover-card-name">Salud y Bienestar</div><div class="discover-card-cta">Explorar →</div></a>
+      <a href="todo-lo-demas.html" class="discover-card"><div class="discover-card-name">Todo lo Demás</div><div class="discover-card-cta">Explorar →</div></a>
     </div>
     <div class="slider-nav">
       <button class="slider-btn" onclick="slideLeft('discoverSlider')">←</button>
@@ -225,7 +218,7 @@
       <li><a href="iluminacion.html">Iluminación</a></li><li><a href="persianas.html">Persianas y Estores</a></li>
       <li><a href="termostatos.html">Termostatos</a></li><li><a href="acceso-hogar.html">Acceso al Hogar</a></li>
       <li><a href="audio.html">Audio</a></li><li><a href="video.html">Video</a></li>
-      <li><a href="controladores.html">Controladores</a></li><li><a href="piscina-spa.html">Piscina y Spa</a></li>
+      <li><a href="piscina-spa.html">Piscina y Spa</a></li>
       <li><a href="salud-bienestar.html">Salud y Bienestar</a></li><li><a href="todo-lo-demas.html">Todo lo Demás</a></li>
     </ul></div>
     <div class="footer-col"><h4>Soporte</h4><ul>

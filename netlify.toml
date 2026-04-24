@@ -39,8 +39,13 @@
 
 [[redirects]]
   from = "/controladores"
-  to = "/controladores.html"
-  status = 200
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/controladores.html"
+  to = "/"
+  status = 301
 
 [[redirects]]
   from = "/piscina-spa"
@@ -66,3 +71,13 @@
   from = "/cameo"
   to = "/cameo.html"
   status = 200
+
+[[redirects]]
+  from = "/crestron-home-os.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/crestron-home-os"
+  to = "/"
+  status = 301

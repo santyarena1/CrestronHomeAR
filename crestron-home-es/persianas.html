@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Persianas y Estores — Crestron Home®</title>
-  <meta name="description" content="Control motorizado de persianas, estores y cortinas con Crestron Home. SolarTrac® y automatización inteligente para tu hogar.">
+  <meta name="description" content="Cortinas, persianas y estores motorizados con Crestron Home: luz natural, telas de diseño, motores discretos y control unificado — Horizon® y Cameo®.">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -31,12 +31,11 @@
 
 <div class="mega-menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
 <div class="mega-menu" id="megaMenu">
-  <button class="menu-close" onclick="closeMenu()">✕</button>
+  <button class="menu-close" type="button" onclick="closeMenu()" aria-label="Cerrar menú"><span class="menu-close__glyph" aria-hidden="true">×</span></button>
   <div class="menu-section">
     <h4>Experiencia</h4>
     <ul>
       <li><a href="index.html">Crestron Home OS</a></li>
-      <li><a href="controladores.html">Tú Tienes el Control</a></li>
     </ul>
   </div>
   <div class="menu-section">
@@ -48,7 +47,11 @@
       <li><a href="acceso-hogar.html">Acceso al Hogar</a></li>
       <li><a href="audio.html">Audio</a></li>
       <li><a href="video.html">Video</a></li>
-      <li><a href="controladores.html">Controladores</a></li>
+    </ul>
+  </div>
+  <div class="menu-section">
+    <h4>Casos de uso</h4>
+    <ul>
       <li><a href="piscina-spa.html">Piscina y Spa</a></li>
       <li><a href="salud-bienestar.html">Salud y Bienestar</a></li>
       <li><a href="todo-lo-demas.html">Todo lo Demás</a></li>
@@ -62,133 +65,196 @@
   <span>Persianas y Estores</span>
 </nav>
 
-<!-- HERO -->
-<section class="hero-split">
+<!-- HERO (arte oficial Product Shading — Crestron) -->
+<section class="hero-split hero-split--compact">
   <div class="hero-left">
-    <p class="supertitle">Crestron Home® — Persianas</p>
-    <h1 class="hero-title">El sol a<br>tu mando.</h1>
-    <button class="scroll-btn" onclick="document.getElementById('intro').scrollIntoView({behavior:'smooth'})">↓</button>
+    <p class="supertitle">Crestron Home® — Persianas y estores</p>
+    <h1 class="hero-title home-hero-typed hero-typed--persianas" id="persianasHeroHeadline">
+      <span id="persianasHeroTypedText" aria-live="polite"></span><span class="home-hero-typed-caret" aria-hidden="true"></span>
+    </h1>
+    <p class="hero-subcopy">Controlá la entrada de luz con precisión, privacidad y una estética que acompaña la arquitectura de cada ambiente.</p>
+    <button type="button" class="scroll-btn" onclick="document.getElementById('intro').scrollIntoView({behavior:'smooth'})" aria-label="Ir al contenido">↓</button>
   </div>
   <div class="hero-right">
-    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/shades-hero-room.jpg"
-         alt="Persianas motorizadas Crestron en sala de estar"
+    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-shades-hero.jpg"
+         alt="Interior con persianas motorizadas Crestron y luz natural"
+         width="1600" height="900" loading="eager" decoding="async"
          onerror="this.style.background='#CCCCCC';this.removeAttribute('src')">
   </div>
 </section>
 
-<!-- INTRO -->
-<section class="section-intro" id="intro">
-  <div class="section-intro-left">
-    <h2 class="section-title">Persianas que<br>trabajan por ti.</h2>
+<!-- INTRO (editorial) -->
+<section class="persianas-intro" id="intro">
+  <div class="persianas-intro__inner">
+    <header class="persianas-intro__header">
+      <div class="persianas-intro__header-text">
+        <p class="persianas-intro__eyebrow">Luz y privacidad</p>
+        <h2 class="persianas-intro__title">Más cerca<br><span class="persianas-intro__title-accent">de la naturaleza.</span></h2>
+      </div>
+      <div class="persianas-intro__header-mark" aria-hidden="true">
+        <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/icon2_shading.svg" alt="" width="80" height="80" loading="eager" decoding="async">
+      </div>
+    </header>
+    <div class="persianas-intro__body">
+      <blockquote class="persianas-intro__quote">
+        <p>La luz natural marca el ritmo del hogar: conviene tratarla con la misma exigencia con la que se elige cada material y cada textura.</p>
+      </blockquote>
+      <div class="persianas-intro__columns">
+        <div>
+          <p class="section-body">Estar en contacto con el exterior nos hace sentir mejor, física y emocionalmente. Las <strong>cortinas y persianas motorizadas Crestron</strong> dialogan con la iluminación LED para modelar la entrada de sol a lo largo del día, atenuar reflejos en pantallas y enmarcar las vistas cuando la escena lo permite.</p>
+        </div>
+        <div>
+          <p class="section-body">SolarTrac® y las escenas de Crestron Home OS alinean <strong>cortinas, estores y climatización</strong> con la misma lógica que las luces: confort visual, privacidad y eficiencia energética, sin fricción para quien habita la casa.</p>
+        </div>
+      </div>
+      <ul class="persianas-intro__highlights" aria-label="Enfoque del sistema">
+        <li><span>Control fino</span> recorrido y presets memorables</li>
+        <li><span>Obra nueva o reforma</span> cableado e inalámbrico</li>
+        <li><span>Una sola plataforma</span> app, pared y automatización</li>
+      </ul>
+      <a href="#video-persianas" class="see-products-btn persianas-intro__cta">Ver pieza en video →</a>
+    </div>
   </div>
-  <div class="section-intro-right">
-    <p class="section-body">Controla la entrada de luz natural con precisión milimétrica. Las persianas motorizadas de Crestron Home se integran perfectamente con la iluminación y la climatización para optimizar el confort y el ahorro energético.</p>
-    <p class="section-body" style="margin-top:20px">Compatible con los principales fabricantes de sistemas de sombreado motorizado: Lutron, Somfy, QMotion y más. SolarTrac® ajusta las persianas automáticamente según la posición del sol durante todo el día.</p>
-    <a href="#productos" class="see-products-btn">Ver productos →</a>
+</section>
+
+<!-- Fácil de controlar -->
+<section class="shading-split" aria-labelledby="shading-easy-title">
+  <div class="shading-split__media">
+    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/shades-easy-to-control2.png"
+         alt="Control de persianas desde la app Crestron Home en tablet y smartphone"
+         width="1200" height="900" loading="lazy" decoding="async"
+         onerror="this.style.background='#ddd';this.removeAttribute('src')">
+  </div>
+  <div class="shading-split__body">
+    <p class="shading-split__kicker">Control intuitivo</p>
+    <h2 class="shading-split__title" id="shading-easy-title">Fácil de controlar</h2>
+    <p class="shading-split__text">Las <strong>persianas motorizadas</strong> permiten manejar estores y cortinas de cualquier estilo desde un teclado de pared, un control remoto o el teléfono. Tanto si renovás, construís desde cero o actualizás el diseño interior, <strong>Crestron Home® OS</strong> es la base inteligente para unificar todo.</p>
   </div>
 </section>
 
 <!-- FEATURES -->
 <section class="features-section">
-  <p class="features-section-title">Control total de la luz natural</p>
+  <p class="features-section-title">Por qué cortinas y persianas Crestron</p>
   <div class="features-grid">
     <div class="feature-item">
-      <div class="feature-title">SolarTrac® Automático</div>
-      <p class="feature-body">El sistema calcula la posición del sol en tiempo real y ajusta las persianas para maximizar el confort y minimizar el deslumbramiento en pantallas.</p>
+      <div class="feature-title">Luz natural y bienestar</div>
+      <p class="feature-body">Composición de luz que respeta el día: menos deslumbramiento en pantallas y más vistas al exterior cuando corresponde.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Escenas de sombreado</div>
-      <p class="feature-body">Crea escenas combinadas de iluminación y persianas. "Modo cine", "Amanecer", "Trabajo en casa" — todo con un solo toque.</p>
+      <div class="feature-title">Ideal para obra nueva o reformas</div>
+      <p class="feature-body">Motores cableados para proyectos con cableado previo; soluciones inalámbricas para remodelaciones o para motorizar persianas manuales existentes.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Ahorro energético</div>
-      <p class="feature-body">Reduce la carga de aire acondicionado bloqueando el calor solar en verano y aprovechando la energía solar pasiva en invierno.</p>
+      <div class="feature-title">Motor silencioso y preciso</div>
+      <p class="feature-body">Tecnología de motor digital de bajo ruido para un recorrido suave del tejido, con control fino de posición y rendimiento pensado para el día a día.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Silencioso y preciso</div>
-      <p class="feature-body">Motores de última generación prácticamente silenciosos con retroalimentación de posición. Control de 0 a 100% sin pasos intermedios.</p>
+      <div class="feature-title">Telas de diseño</div>
+      <p class="feature-body">Amplia oferta de enrollables y tejidos tipo sheer para filtrar la luz con estética cuidada, en línea con interiores clásicos, modernos o contemporáneos.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Integración total</div>
-      <p class="feature-body">Se integra con el sistema de iluminación, climatización y seguridad de Crestron Home para automatizaciones inteligentes y coordinadas.</p>
+      <div class="feature-title">Escenas con iluminación</div>
+      <p class="feature-body">Escenas que mezclan luces y persianas — cine en casa, amanecer, trabajo desde casa — con un solo toque en la app o en la pared.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Control remoto y local</div>
-      <p class="feature-body">Manejo desde la app, keypads de pared, comandos de voz o programaciones automáticas. Siempre en control, estés donde estés.</p>
+      <div class="feature-title">Eficiencia energética</div>
+      <p class="feature-body">Menos carga térmica en verano al bloquear el sol directo y mejor aprovechamiento de la luz pasiva en invierno, coordinado con climatización.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO (product-shading-video.mp4 — CDN Crestron) -->
+<div class="fullwidth-video" id="video-persianas" aria-label="Video de cortinas y persianas motorizadas Crestron">
+  <video class="fullwidth-video__media" autoplay muted loop playsinline preload="auto" disablepictureinpicture
+         poster="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-shades-reliable.jpg"
+         aria-hidden="true">
+    <source src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-shading-video.mp4" type="video/mp4">
+  </video>
+</div>
+
+<!-- Fiabilidad -->
+<section class="shading-split shading-split--reverse" aria-labelledby="shading-reliable-title">
+  <div class="shading-split__media">
+    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-shades-reliable.jpg"
+         alt="Detalle de persianas motorizadas Crestron en vivienda"
+         width="1600" height="900" loading="lazy" decoding="async"
+         onerror="this.style.background='#ccc';this.removeAttribute('src')">
+  </div>
+  <div class="shading-split__body">
+    <p class="shading-split__kicker">Rendimiento</p>
+    <h2 class="shading-split__title" id="shading-reliable-title">Silenciosas, duraderas y fiables</h2>
+    <p class="shading-split__text">Las persianas motorizadas Crestron combinan motores compactos con operación casi silenciosa y control preciso del recorrido del tejido. Un sistema pensado para convivir con el diseño interior sin ruidos ni movimientos bruscos.</p>
+  </div>
+</section>
+
+<img class="fullwidth-image"
+     src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-shades-design-fabrics.jpg"
+     alt="Selección de telas y acabados para persianas enrollables"
+     width="1920" height="960" loading="lazy" decoding="async"
+     onerror="this.style.background='#BBBBBB';this.removeAttribute('src')">
+
+<section class="shading-fullbleed-caption" aria-labelledby="shading-fabrics-title">
+  <h2 id="shading-fabrics-title">Amplia gama de telas de diseño</h2>
+  <p>Crestron ofrece numerosas opciones de enrollables y tejidos tipo sheer para domar la luz con elegancia. Colecciones pensadas para convivir con estilos tradicionales, modernos o contemporáneos, siempre con la misma experiencia de control en Crestron Home.</p>
+</section>
+
+<section class="shades-orbit" id="persianas-lab" aria-labelledby="persianas-lab-title">
+  <div class="shades-orbit__inner">
+    <p class="shades-orbit__kicker">Interactivo Crestron</p>
+    <h2 id="persianas-lab-title">Órbita solar y apertura automática</h2>
+    <p class="shades-orbit__lead">Mové la hora y simulá cómo responden cortinas y estores en tiempo real según la posición del sol.</p>
+    <div class="shades-orbit__control">
+      <label for="shadesHourRange">Hora del día</label>
+      <input id="shadesHourRange" type="range" min="6" max="22" step="1" value="9">
+      <div class="shades-orbit__ticks"><span>06:00</span><span id="shadesHourValue">09:00</span><span>22:00</span></div>
+    </div>
+    <div class="shades-orbit__stage" aria-live="polite" aria-atomic="true">
+      <div class="shades-orbit__compass">
+        <div class="shades-orbit__sun" id="shadesSunDot"></div>
+        <div class="shades-orbit__ring"></div>
+      </div>
+      <div class="shades-orbit__blind" aria-hidden="true">
+        <div class="shades-orbit__blind-head">Persiana simulada</div>
+        <div class="shades-orbit__window">
+          <div class="shades-orbit__slats" id="shadesBlindSlats"></div>
+        </div>
+        <div class="shades-orbit__blind-meta">Apertura actual: <strong id="shadesBlindOpen">46%</strong></div>
+      </div>
+    </div>
+    <div class="shades-orbit__status">
+      <strong id="shadesOrbitState">Modo mañana</strong>
+      <span id="shadesOrbitMeta">Apertura 46% · Control de deslumbramiento suave</span>
     </div>
   </div>
 </section>
 
 <img class="fullwidth-image"
-     src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/shades-fullwidth.jpg"
-     alt="Persianas en habitación de lujo"
+     src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-shades-lifestyle.jpg"
+     alt="Ambiente residencial con persianas y luz natural"
+     width="1920" height="960" loading="lazy" decoding="async"
      onerror="this.style.background='#BBBBBB';this.removeAttribute('src')">
 
-<!-- PRODUCTS -->
-<section class="products-section" id="productos">
-  <div class="products-header">
-    <h2>Productos de Persianas y Estores</h2>
-  </div>
-
-  <p class="product-category-label">Interfaces de Control</p>
-  <div class="product-cards-row">
-    <a href="https://www.crestron.com/Products/Shading-Solutions" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/cs-mtss-n.jpg"
-           alt="CS-MTSS-N"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">CS-MTSS-N SolarTrac®</div>
-        <div class="product-card-desc">Interfaz de control de sombreado con SolarTrac® integrado. Control automático basado en posición solar GPS.</div>
-        <div class="product-card-cta">Ver más →</div>
+<!-- Keypads en este sitio (sin enlaces a crestron.com) -->
+<section class="shading-keypads" aria-labelledby="shading-keypads-title">
+  <h2 id="shading-keypads-title">Control también desde la pared</h2>
+  <p class="shading-keypads__lead">Integrá cortinas, persianas y estores con teclados que comparten el mismo lenguaje formal que el resto de Crestron Home.</p>
+  <div class="shading-keypads__grid">
+    <a href="horizon.html" class="shading-keypad-card">
+      <img src="LIGHTINIG/horizon-textured-black-detail.png"
+           alt="Horizon Keypad acabado texturado negro con grabados retroiluminados" width="900" height="1400" loading="lazy" decoding="async"
+           onerror="this.src='LIGHTINIG/horizon-keypad-lineup.png'">
+      <div class="shading-keypad-card__body">
+        <div class="shading-keypad-card__name">Horizon® Keypad</div>
+        <div class="shading-keypad-card__cta">Conocer Horizon en este sitio →</div>
       </div>
     </a>
-    <a href="https://www.crestron.com/Products/Shading-Solutions" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/clw-shades.jpg"
-           alt="CLW-SHADE"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">CLW-SHADE</div>
-        <div class="product-card-desc">Control de persiana de pared con botones de subida, bajada y preset. Diseño compacto compatible con cajas estándar.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-    <a href="https://www.crestron.com/Products/Shading-Solutions" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/glps-shade.jpg"
-           alt="GLPS-SHADE"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">GLPS-SHADE</div>
-        <div class="product-card-desc">Módulo de control de persianas para integración con sistema Crestron Home. Compatible con motores RS-485 y 0-10V.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-  </div>
-
-  <p class="product-category-label">Motores y Actuadores</p>
-  <div class="product-cards-row">
-    <a href="https://www.crestron.com/Products/Shading-Solutions" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/shd-motor.jpg"
-           alt="SHD Motor"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">SHD-MOTOR</div>
-        <div class="product-card-desc">Motor tubular para persianas de enrollado. Operación silenciosa con retroalimentación de posición integrada.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-    <a href="https://www.crestron.com/Products/Shading-Solutions" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/shd-venetian.jpg"
-           alt="SHD Venetian"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">SHD-VENETIAN</div>
-        <div class="product-card-desc">Control de persianas venecianas con ajuste independiente de altura y ángulo de lamas para control total de la privacidad.</div>
-        <div class="product-card-cta">Ver más →</div>
+    <a href="cameo.html" class="shading-keypad-card">
+      <img src="LIGHTINIG/cameo/hero-cameo-keypad.jpg"
+           alt="Cameo Keypad edge-to-edge con acabado sobrio y perfil decorativo" width="800" height="1000" loading="lazy" decoding="async"
+           onerror="this.src='LIGHTINIG/cameo-keypad.png'">
+      <div class="shading-keypad-card__body">
+        <div class="shading-keypad-card__name">Cameo® Keypad</div>
+        <div class="shading-keypad-card__cta">Conocer Cameo en este sitio →</div>
       </div>
     </a>
   </div>
@@ -203,7 +269,6 @@
       <a href="termostatos.html" class="discover-card"><div class="discover-card-name">Termostatos</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="audio.html" class="discover-card"><div class="discover-card-name">Audio</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="video.html" class="discover-card"><div class="discover-card-name">Video</div><div class="discover-card-cta">Explorar →</div></a>
-      <a href="controladores.html" class="discover-card"><div class="discover-card-name">Controladores</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="acceso-hogar.html" class="discover-card"><div class="discover-card-name">Acceso al Hogar</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="piscina-spa.html" class="discover-card"><div class="discover-card-name">Piscina y Spa</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="salud-bienestar.html" class="discover-card"><div class="discover-card-name">Salud y Bienestar</div><div class="discover-card-cta">Explorar →</div></a>
@@ -237,7 +302,6 @@
       <li><a href="acceso-hogar.html">Acceso al Hogar</a></li>
       <li><a href="audio.html">Audio</a></li>
       <li><a href="video.html">Video</a></li>
-      <li><a href="controladores.html">Controladores</a></li>
       <li><a href="piscina-spa.html">Piscina y Spa</a></li>
       <li><a href="salud-bienestar.html">Salud y Bienestar</a></li>
       <li><a href="todo-lo-demas.html">Todo lo Demás</a></li>

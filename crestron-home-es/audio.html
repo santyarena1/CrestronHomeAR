@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Audio — Crestron Home®</title>
-  <meta name="description" content="Audio multiroom con Crestron Home. Música en cada rincón de tu hogar con calidad de estudio. Sonnex® y altavoces Procise®.">
+  <meta name="description" content="Audio residencial con Crestron Home: música multiroom, zonas interiores y exteriores, escenas inteligentes y control táctil unificado.">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -30,10 +30,9 @@
 
 <div class="mega-menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
 <div class="mega-menu" id="megaMenu">
-  <button class="menu-close" onclick="closeMenu()">✕</button>
+  <button class="menu-close" type="button" onclick="closeMenu()" aria-label="Cerrar menú"><span class="menu-close__glyph" aria-hidden="true">×</span></button>
   <div class="menu-section"><h4>Experiencia</h4><ul>
     <li><a href="index.html">Crestron Home OS</a></li>
-    <li><a href="controladores.html">Tú Tienes el Control</a></li>
   </ul></div>
   <div class="menu-section"><h4>Productos</h4><ul>
     <li><a href="iluminacion.html">Iluminación</a></li>
@@ -42,7 +41,8 @@
     <li><a href="acceso-hogar.html">Acceso al Hogar</a></li>
     <li><a href="audio.html">Audio</a></li>
     <li><a href="video.html">Video</a></li>
-    <li><a href="controladores.html">Controladores</a></li>
+  </ul></div>
+  <div class="menu-section"><h4>Casos de uso</h4><ul>
     <li><a href="piscina-spa.html">Piscina y Spa</a></li>
     <li><a href="salud-bienestar.html">Salud y Bienestar</a></li>
     <li><a href="todo-lo-demas.html">Todo lo Demás</a></li>
@@ -56,162 +56,183 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero-split">
+<section class="hero-split hero-split--compact">
   <div class="hero-left">
     <p class="supertitle">Crestron Home® — Audio</p>
-    <h1 class="hero-title">Música<br>en cada<br>rincón.</h1>
-    <button class="scroll-btn" onclick="document.getElementById('intro').scrollIntoView({behavior:'smooth'})">↓</button>
+    <h1 class="hero-title home-hero-typed hero-typed--audio" id="audioHeroHeadline">
+      <span id="audioHeroTypedText"></span><span class="home-hero-typed-caret" aria-hidden="true"></span>
+    </h1>
+    <p class="hero-subcopy">Una plataforma de audio residencial que combina fidelidad, diseño discreto y control instantáneo por zonas.</p>
+    <button type="button" class="scroll-btn" onclick="document.getElementById('intro').scrollIntoView({behavior:'smooth'})" aria-label="Ir al contenido">↓</button>
   </div>
   <div class="hero-right">
-    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/audio-hero-room.jpg"
-         alt="Sistema de audio multiroom Crestron en sala de estar"
+    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/audio-listen3.png"
+         alt="Control de audio residencial Crestron en app y paneles"
+         width="1200" height="1525" loading="eager" decoding="async"
          onerror="this.style.background='#1a1a1a';this.removeAttribute('src')">
   </div>
 </section>
 
 <!-- INTRO -->
-<section class="section-intro" id="intro">
-  <div class="section-intro-left">
-    <h2 class="section-title">Audio que<br>transforma espacios.</h2>
-  </div>
-  <div class="section-intro-right">
-    <p class="section-body">Disfruta de audio de alta fidelidad en cualquier habitación de tu hogar, de forma independiente o sincronizada. Con Crestron Sonnex®, la música fluye sin interrupciones desde la cocina hasta el jardín.</p>
-    <p class="section-body" style="margin-top:20px">Compatible con Spotify, Apple Music, Tidal, Amazon Music y cualquier fuente de audio local o streaming. Los altavoces Procise® de Crestron se instalan discretamente en el techo o la pared sin sacrificar el diseño de tus espacios.</p>
-    <a href="#productos" class="see-products-btn">Ver productos →</a>
+<section class="audio-intro" id="intro">
+  <div class="audio-intro__inner">
+    <header class="audio-intro__head">
+      <div>
+        <p class="audio-intro__kicker">Experiencia sonora</p>
+        <h2 class="audio-intro__title">Sonido que ordena<br>el ambiente.</h2>
+      </div>
+      <img class="audio-intro__icon" src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/icon2_audio.svg" alt="" width="72" height="72" loading="lazy" decoding="async">
+    </header>
+    <div class="audio-intro__grid">
+      <p class="section-body">Con un sistema de audio Crestron, cada ambiente puede llenarse de un paisaje sonoro elegido para cada momento: foco, descanso o celebración. El resultado no es solo entretenimiento; también reduce tensión y mejora la calidad de vida cotidiana.</p>
+      <p class="section-body">Crestron Home coordina fuentes, zonas y volumen desde una sola interfaz. Ya sea una playlist en cocina, jazz en el living o sonido exterior para una reunión, todo responde como un único sistema.</p>
+    </div>
+    <a href="#audio-estudio" class="see-products-btn audio-intro__cta">Abrir estudio de audio →</a>
   </div>
 </section>
 
-<!-- FEATURES -->
+<!-- INTERACTIVO -->
+<section class="audio-studio" id="audio-estudio" aria-labelledby="audio-studio-title">
+  <div class="audio-studio__inner">
+    <div class="audio-studio__left">
+      <p class="audio-studio__kicker">Interactivo Crestron</p>
+      <h2 id="audio-studio-title">Estudio de escenas y zonas</h2>
+      <p>Probá cómo cambia el balance entre habitaciones según la escena. El objetivo es mostrar una operación clara, elegante y coherente con la lógica Crestron Home.</p>
+
+      <div class="audio-studio__scene-buttons" role="group" aria-label="Escenas de audio">
+        <button type="button" class="audio-scene-btn is-active" data-audio-scene="calma">Calma</button>
+        <button type="button" class="audio-scene-btn" data-audio-scene="recepcion">Recepción</button>
+        <button type="button" class="audio-scene-btn" data-audio-scene="noche">Noche</button>
+      </div>
+
+      <div class="audio-studio__now">
+        <span class="audio-studio__now-label">Escena activa</span>
+        <strong id="audioSceneName">Calma</strong>
+        <span id="audioSceneMeta">Focus Jazz · 72 BPM · Nivel medio</span>
+      </div>
+    </div>
+
+    <div class="audio-studio__right" aria-live="polite" aria-atomic="true">
+      <div class="audio-zone">
+        <div class="audio-zone__top"><span>Living</span><span id="audioZoneLivingVal">68%</span></div>
+        <div class="audio-zone__bar"><div id="audioZoneLivingBar"></div></div>
+      </div>
+      <div class="audio-zone">
+        <div class="audio-zone__top"><span>Cocina</span><span id="audioZoneKitchenVal">52%</span></div>
+        <div class="audio-zone__bar"><div id="audioZoneKitchenBar"></div></div>
+      </div>
+      <div class="audio-zone">
+        <div class="audio-zone__top"><span>Terraza</span><span id="audioZoneTerraceVal">40%</span></div>
+        <div class="audio-zone__bar"><div id="audioZoneTerraceBar"></div></div>
+      </div>
+      <div class="audio-zone">
+        <div class="audio-zone__top"><span>Suite principal</span><span id="audioZoneSuiteVal">34%</span></div>
+        <div class="audio-zone__bar"><div id="audioZoneSuiteBar"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="shading-split" aria-labelledby="audio-listen-title">
+  <div class="shading-split__media">
+    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/audio-listen3.png"
+         alt="Audio en múltiples ambientes desde Crestron Home"
+         width="1200" height="1525" loading="lazy" decoding="async"
+         onerror="this.style.background='#ddd';this.removeAttribute('src')">
+  </div>
+  <div class="shading-split__body">
+    <p class="shading-split__kicker">Escucha personalizada</p>
+    <h2 class="shading-split__title" id="audio-listen-title">Tu artista, playlist o servicio en cualquier habitación</h2>
+    <p class="shading-split__text">Elegí fuentes por zona o sincronizá toda la casa con una sola escena. El flujo de uso se mantiene igual en panel táctil, app móvil y superficies de pared.</p>
+  </div>
+</section>
+
+<section class="shading-split shading-split--reverse" aria-labelledby="audio-party-title">
+  <div class="shading-split__media">
+    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/audio-create3.png"
+         alt="Zonas de audio para interior y exterior"
+         width="1200" height="1310" loading="lazy" decoding="async"
+         onerror="this.style.background='#ddd';this.removeAttribute('src')">
+  </div>
+  <div class="shading-split__body">
+    <p class="shading-split__kicker">Zonas inteligentes</p>
+    <h2 class="shading-split__title" id="audio-party-title">Creá experiencias indoor y outdoor con un toque</h2>
+    <p class="shading-split__text">Definí áreas de escucha para reuniones interiores y exteriores, con niveles independientes y transiciones suaves entre ambientes.</p>
+  </div>
+</section>
+
 <section class="features-section">
-  <p class="features-section-title">Audio sin compromisos</p>
+  <p class="features-section-title">Audio residencial, sin fricción</p>
   <div class="features-grid">
     <div class="feature-item">
-      <div class="feature-title">Audio Multiroom</div>
-      <p class="feature-body">Controla hasta 16 zonas de audio de forma independiente. Música diferente en cada habitación o la misma sinfonía en toda la casa.</p>
+      <div class="feature-title">Multiroom real</div>
+      <p class="feature-body">Múltiples zonas con control independiente o sincronizado según escena y horario.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Streaming de alta resolución</div>
-      <p class="feature-body">Soporte para audio sin pérdida en FLAC, WAV y MQA. Compatible con los principales servicios de streaming de música.</p>
+      <div class="feature-title">Streaming y fuentes unificadas</div>
+      <p class="feature-body">Acceso rápido a playlists y servicios favoritos desde una sola interfaz de control.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Altavoces invisibles</div>
-      <p class="feature-body">Los altavoces Procise® se integran en el techo o la pared sin afectar la estética de tus habitaciones. Sonido excepcional sin que se note.</p>
+      <div class="feature-title">Ingeniería acústica</div>
+      <p class="feature-body">Parlantes y amplificación diseñados para desempeño sólido y claridad en todo el espectro.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Control por voz</div>
-      <p class="feature-body">Compatible con Amazon Alexa, Google Assistant y Siri. Controla el volumen, cambia de canción o elige la zona con solo tu voz.</p>
+      <div class="feature-title">Interacción pasiva o avanzada</div>
+      <p class="feature-body">Podés dejar que las rutinas hagan su trabajo o tomar control detallado cuando lo necesites.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Integración con escenas</div>
-      <p class="feature-body">La escena "Bienvenida a casa" puede activar tu playlist favorita automáticamente. El audio forma parte de la experiencia completa del hogar.</p>
+      <div class="feature-title">Integración con escenas del hogar</div>
+      <p class="feature-body">Audio, luces y clima coordinados para bienvenida, trabajo, descanso o entretenimiento.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Amplificadores integrados</div>
-      <p class="feature-body">Los amplificadores Sonnex® proveen potencia y calidad de sonido sin necesidad de equipos externos voluminosos. Todo integrado y oculto.</p>
+      <div class="feature-title">Diseño discreto</div>
+      <p class="feature-body">Componentes que se integran a la arquitectura interior sin contaminar visualmente los espacios.</p>
+    </div>
+  </div>
+</section>
+
+<section class="interactive-panel interactive-panel--light" id="audio-sources" aria-labelledby="audio-sources-title">
+  <div class="interactive-panel__inner">
+    <div class="interactive-panel__left">
+      <p class="interactive-panel__kicker">Interactivo Crestron</p>
+      <h2 id="audio-sources-title">Selector de fuente inteligente</h2>
+      <p>Probá el cambio instantáneo entre fuentes para entender cómo Crestron Home mantiene continuidad sonora entre servicios y dispositivos.</p>
+      <div class="interactive-panel__buttons" role="group" aria-label="Fuentes de audio">
+        <button type="button" class="interactive-chip is-active" data-source-mode="streaming">Streaming</button>
+        <button type="button" class="interactive-chip" data-source-mode="vinyl">Tocadiscos</button>
+        <button type="button" class="interactive-chip" data-source-mode="tv">TV / Cine</button>
+      </div>
+      <div class="interactive-panel__status">
+        <span class="interactive-panel__status-label">Fuente activa</span>
+        <strong id="audioSourceName">Streaming</strong>
+        <span id="audioSourceMeta">Playlist curada · Multiroom sincronizado · Latencia mínima</span>
+      </div>
+    </div>
+    <div class="interactive-panel__right" aria-live="polite" aria-atomic="true">
+      <div class="interactive-state"><span>Origen</span><strong id="audioSourceOrigin">Nube</strong></div>
+      <div class="interactive-state"><span>Formato</span><strong id="audioSourceFormat">FLAC / Lossless</strong></div>
+      <div class="interactive-state"><span>Zonas activas</span><strong id="audioSourceZones">4 zonas</strong></div>
+      <div class="interactive-state"><span>Prioridad DSP</span><strong id="audioSourceDsp">Escena residencial</strong></div>
     </div>
   </div>
 </section>
 
 <img class="fullwidth-image"
-     src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/audio-outdoor.jpg"
-     alt="Audio en exterior de hogar con Crestron"
+     src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-audio-engineered.jpg"
+     alt="Sistema de audio Crestron diseñado para escucha óptima"
+     width="1200" height="1327" loading="lazy" decoding="async"
      onerror="this.style.background='#BBBBBB';this.removeAttribute('src')">
 
-<!-- PRODUCTS -->
-<section class="products-section" id="productos">
-  <div class="products-header">
-    <h2>Productos de Audio</h2>
-  </div>
-
-  <p class="product-category-label">Amplificadores Multiroom</p>
-  <div class="product-cards-row">
-    <a href="https://www.crestron.com/Products/Audio/Multiroom-Audio" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/sonnex-amp.jpg"
-           alt="Sonnex Amplifier"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">Sonnex® Amp</div>
-        <div class="product-card-desc">Amplificador multiroom de 8 zonas con 40W por canal. Soporte para audio en alta resolución hasta 24bit/192kHz.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-    <a href="https://www.crestron.com/Products/Audio/Multiroom-Audio" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/amp-16x60.jpg"
-           alt="AMP-16X60"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">AMP-16X60</div>
-        <div class="product-card-desc">Amplificador de 16 canales con 60W por canal. Procesamiento de señal digital integrado para un sonido cristalino.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-    <a href="https://www.crestron.com/Products/Audio/Multiroom-Audio" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/amp-8x60.jpg"
-           alt="AMP-8X60"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">AMP-8X60</div>
-        <div class="product-card-desc">Amplificador compacto de 8 canales. Ideal para residencias medianas con hasta 4 zonas estéreo.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-  </div>
-
-  <p class="product-category-label">Altavoces Procise®</p>
-  <div class="product-cards-row">
-    <a href="https://www.crestron.com/Products/Audio/Speakers" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/procise-ceiling.jpg"
-           alt="Procise Ceiling Speaker"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">Procise® Empotrable</div>
-        <div class="product-card-desc">Altavoz de techo de 6.5 pulgadas con tweeter girable. Se instala a nivel del techo para una estética perfecta.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-    <a href="https://www.crestron.com/Products/Audio/Speakers" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/procise-outdoor.jpg"
-           alt="Procise Outdoor Speaker"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">Procise® Exterior</div>
-        <div class="product-card-desc">Altavoz para exteriores resistente a la intemperie (IP55). Ideal para jardines, terrazas y áreas de piscina.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-    <a href="https://www.crestron.com/Products/Audio/Speakers" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/procise-subwoofer.jpg"
-           alt="Procise Subwoofer"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">Procise® Subwoofer</div>
-        <div class="product-card-desc">Subwoofer empotrable de alto rendimiento para graves profundos y presentes. Se instala en el techo sin ocupar espacio.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-  </div>
-
-  <p class="product-category-label">Streaming y Fuentes</p>
-  <div class="product-cards-row">
-    <a href="https://www.crestron.com/Products/Audio/Streaming" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/crestron-streaming.jpg"
-           alt="Streaming Hub"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">Media Hub</div>
-        <div class="product-card-desc">Hub de streaming centralizado compatible con Spotify Connect, AirPlay 2 y Bluetooth. Una fuente para todo el hogar.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-  </div>
+<section class="shading-fullbleed-caption" aria-labelledby="audio-control-title">
+  <h2 id="audio-control-title">Escuchá en automático o ajustá en detalle</h2>
+  <p>Crestron Home permite una operación simple para todos y control profundo para usuarios avanzados desde la misma plataforma.</p>
 </section>
+
+<img class="fullwidth-image"
+     src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-audio-sonos.jpg"
+     alt="Control de ecosistema Sonos dentro de Crestron Home"
+     width="1600" height="648" loading="lazy" decoding="async"
+     onerror="this.style.background='#BBBBBB';this.removeAttribute('src')">
 
 <!-- DISCOVER MORE -->
 <section class="discover-section">
@@ -219,13 +240,13 @@
   <div class="discover-slider-wrapper">
     <div class="discover-slider" id="discoverSlider">
       <a href="iluminacion.html" class="discover-card"><div class="discover-card-name">Iluminación</div><div class="discover-card-cta">Explorar →</div></a>
-      <a href="persianas.html" class="discover-card"><div class="discover-card-name">Persianas</div><div class="discover-card-cta">Explorar →</div></a>
+      <a href="persianas.html" class="discover-card"><div class="discover-card-name">Persianas y Estores</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="termostatos.html" class="discover-card"><div class="discover-card-name">Termostatos</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="video.html" class="discover-card"><div class="discover-card-name">Video</div><div class="discover-card-cta">Explorar →</div></a>
-      <a href="controladores.html" class="discover-card"><div class="discover-card-name">Controladores</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="acceso-hogar.html" class="discover-card"><div class="discover-card-name">Acceso al Hogar</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="piscina-spa.html" class="discover-card"><div class="discover-card-name">Piscina y Spa</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="salud-bienestar.html" class="discover-card"><div class="discover-card-name">Salud y Bienestar</div><div class="discover-card-cta">Explorar →</div></a>
+      <a href="todo-lo-demas.html" class="discover-card"><div class="discover-card-name">Todo lo Demás</div><div class="discover-card-cta">Explorar →</div></a>
     </div>
     <div class="slider-nav">
       <button class="slider-btn" onclick="slideLeft('discoverSlider')">←</button>
@@ -239,8 +260,8 @@
     <h3>Tu música, donde quieras, cuando quieras.</h3>
     <p>La app Crestron Home es gratuita. Disponible en iOS y Android.</p>
     <div class="app-badges">
-      <a href="https://apps.apple.com/us/app/crestron-home/id1466827669" target="_blank" class="app-badge">🍎 App Store</a>
-      <a href="https://play.google.com/store/apps/details?id=com.crestron.crestronhome" target="_blank" class="app-badge">▶ Google Play</a>
+      <a href="https://apps.apple.com/us/app/crestron-home/id1466827669" target="_blank" rel="noopener noreferrer" class="app-badge">🍎 App Store</a>
+      <a href="https://play.google.com/store/apps/details?id=com.crestron.crestronhome" target="_blank" rel="noopener noreferrer" class="app-badge">▶ Google Play</a>
     </div>
   </div>
 </section>
@@ -251,7 +272,7 @@
       <li><a href="iluminacion.html">Iluminación</a></li><li><a href="persianas.html">Persianas y Estores</a></li>
       <li><a href="termostatos.html">Termostatos</a></li><li><a href="acceso-hogar.html">Acceso al Hogar</a></li>
       <li><a href="audio.html">Audio</a></li><li><a href="video.html">Video</a></li>
-      <li><a href="controladores.html">Controladores</a></li><li><a href="piscina-spa.html">Piscina y Spa</a></li>
+      <li><a href="piscina-spa.html">Piscina y Spa</a></li>
       <li><a href="salud-bienestar.html">Salud y Bienestar</a></li><li><a href="todo-lo-demas.html">Todo lo Demás</a></li>
     </ul></div>
     <div class="footer-col"><h4>Soporte</h4><ul>
@@ -262,8 +283,8 @@
     </ul></div>
     <div class="footer-col"><h4>App Móvil</h4>
       <div class="footer-app-btns">
-        <a href="https://apps.apple.com/us/app/crestron-home/id1466827669" target="_blank" class="footer-app-btn">🍎 App Store</a>
-        <a href="https://play.google.com/store/apps/details?id=com.crestron.crestronhome" target="_blank" class="footer-app-btn">▶ Google Play</a>
+        <a href="https://apps.apple.com/us/app/crestron-home/id1466827669" target="_blank" rel="noopener noreferrer" class="footer-app-btn">🍎 App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.crestron.crestronhome" target="_blank" rel="noopener noreferrer" class="footer-app-btn">▶ Google Play</a>
       </div>
     </div>
   </div>

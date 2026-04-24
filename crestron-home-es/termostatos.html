@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Termostatos — Crestron Home®</title>
-  <meta name="description" content="Termostatos inteligentes Crestron Home. Control de climatización preciso, eficiente y conectado para cada habitación de tu hogar.">
+  <meta name="description" content="Termostatos inteligentes Crestron Home con control por zonas, rutinas horarias y compatibilidad HVAC. Confort térmico elegante para toda la casa.">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -30,10 +30,9 @@
 
 <div class="mega-menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
 <div class="mega-menu" id="megaMenu">
-  <button class="menu-close" onclick="closeMenu()">✕</button>
+  <button class="menu-close" type="button" onclick="closeMenu()" aria-label="Cerrar menú"><span class="menu-close__glyph" aria-hidden="true">×</span></button>
   <div class="menu-section"><h4>Experiencia</h4><ul>
     <li><a href="index.html">Crestron Home OS</a></li>
-    <li><a href="controladores.html">Tú Tienes el Control</a></li>
   </ul></div>
   <div class="menu-section"><h4>Productos</h4><ul>
     <li><a href="iluminacion.html">Iluminación</a></li>
@@ -42,7 +41,8 @@
     <li><a href="acceso-hogar.html">Acceso al Hogar</a></li>
     <li><a href="audio.html">Audio</a></li>
     <li><a href="video.html">Video</a></li>
-    <li><a href="controladores.html">Controladores</a></li>
+  </ul></div>
+  <div class="menu-section"><h4>Casos de uso</h4><ul>
     <li><a href="piscina-spa.html">Piscina y Spa</a></li>
     <li><a href="salud-bienestar.html">Salud y Bienestar</a></li>
     <li><a href="todo-lo-demas.html">Todo lo Demás</a></li>
@@ -56,136 +56,154 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero-split">
+<section class="hero-split hero-split--compact">
   <div class="hero-left">
     <p class="supertitle">Crestron Home® — Termostatos</p>
-    <h1 class="hero-title">La temperatura<br>perfecta,<br>siempre.</h1>
-    <button class="scroll-btn" onclick="document.getElementById('intro').scrollIntoView({behavior:'smooth'})">↓</button>
+    <h1 class="hero-title home-hero-typed hero-typed--termostatos" id="termostatosHeroHeadline">
+      <span id="termostatosHeroTypedText" aria-live="polite"></span><span class="home-hero-typed-caret" aria-hidden="true"></span>
+    </h1>
+    <p class="hero-subcopy">Mantener el clima ideal deja de ser una tarea: el sistema ajusta cada zona con lógica de confort y eficiencia energética.</p>
+    <button type="button" class="scroll-btn" onclick="document.getElementById('intro').scrollIntoView({behavior:'smooth'})" aria-label="Ir al contenido">↓</button>
   </div>
   <div class="hero-right">
-    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/thermostat-hero.jpg"
-         alt="Termostato Crestron TSTAT10 en pared"
+    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-thermostats-thoughtfully-designed.jpg"
+         alt="Termostato Horizon en interior residencial"
+         width="1600" height="1140" loading="eager" decoding="async"
          onerror="this.style.background='#CCCCCC';this.removeAttribute('src')">
   </div>
 </section>
 
 <!-- INTRO -->
-<section class="section-intro" id="intro">
-  <div class="section-intro-left">
-    <h2 class="section-title">Confort térmico<br>inteligente.</h2>
+<section class="clima-intro" id="intro">
+  <div class="clima-intro__inner">
+    <header class="clima-intro__head">
+      <div>
+        <p class="clima-intro__kicker">Confort térmico</p>
+        <h2 class="clima-intro__title">La temperatura correcta,<br>en el momento preciso.</h2>
+      </div>
+      <img class="clima-intro__icon" src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/icon2_thermostats.svg" alt="" width="72" height="72" loading="lazy" decoding="async">
+    </header>
+    <div class="clima-intro__grid">
+      <p class="section-body">Nuestro cuerpo necesita mantenerse dentro de un rango térmico estable. Si la casa está demasiado caliente o fría, en especial al descansar, ese equilibrio se rompe. Los <strong>termostatos inteligentes Horizon®</strong>, junto a sistemas de climatización por zonas, sostienen un ambiente óptimo durante todo el día.</p>
+      <p class="section-body">Crestron Home integra temperatura, humedad, horarios y escenas para que el confort no dependa de ajustes constantes. El resultado es una experiencia más serena, eficiente y coherente con la arquitectura del hogar.</p>
+    </div>
+    <a href="#clima-bloques" class="see-products-btn clima-intro__cta">Explorar la experiencia térmica →</a>
   </div>
-  <div class="section-intro-right">
-    <p class="section-body">Los termostatos Crestron Home van más allá del control de temperatura. Se integran con la iluminación, las persianas y la ventilación para crear un ambiente perfecto de forma automática, anticipándose a tus necesidades.</p>
-    <p class="section-body" style="margin-top:20px">Compatible con los principales sistemas HVAC del mercado. Control por zona para máxima eficiencia energética. Pantallas táctiles de alta resolución con diseño elegante que complementa cualquier interior.</p>
-    <a href="#productos" class="see-products-btn">Ver productos →</a>
+</section>
+
+<section class="shading-split" id="clima-bloques" aria-labelledby="clima-design-title">
+  <div class="shading-split__media">
+    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-thermostats-thoughtfully-designed.jpg"
+         alt="Termostato Horizon con diseño minimalista"
+         width="1600" height="1140" loading="lazy" decoding="async"
+         onerror="this.style.background='#ddd';this.removeAttribute('src')">
+  </div>
+  <div class="shading-split__body">
+    <p class="shading-split__kicker">Diseño inteligente</p>
+    <h2 class="shading-split__title" id="clima-design-title">Pensado para obra nueva o retrofit</h2>
+    <p class="shading-split__text">Los termostatos Horizon incorporan comunicación Wi-Fi para facilitar la instalación tanto en proyectos nuevos como en renovaciones. Sin baterías que reemplazar, la operación cotidiana se vuelve simple y consistente.</p>
+  </div>
+</section>
+
+<section class="shading-split shading-split--reverse" aria-labelledby="clima-routines-title">
+  <div class="shading-split__media">
+    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-thermostats-schedule-routine.jpg"
+         alt="Programación de rutinas de temperatura en la app Crestron Home"
+         width="1200" height="1190" loading="lazy" decoding="async"
+         onerror="this.style.background='#ddd';this.removeAttribute('src')">
+  </div>
+  <div class="shading-split__body">
+    <p class="shading-split__kicker">Rutinas</p>
+    <h2 class="shading-split__title" id="clima-routines-title">Programá tu día térmico</h2>
+    <p class="shading-split__text">Configurá escenas para despertar, volver del trabajo o descansar. La casa puede anticipar la temperatura ideal para cada franja horaria y reducir ajustes manuales innecesarios.</p>
   </div>
 </section>
 
 <!-- FEATURES -->
 <section class="features-section">
-  <p class="features-section-title">Climatización de próxima generación</p>
+  <p class="features-section-title">Climatización integral con Crestron Home</p>
   <div class="features-grid">
     <div class="feature-item">
-      <div class="feature-title">Control por zona</div>
-      <p class="feature-body">Configura temperaturas independientes para cada habitación. La sala a 22°C, los dormitorios a 20°C — todo bajo control sin desperdiciar energía.</p>
+      <div class="feature-title">Control por zonas</div>
+      <p class="feature-body">Definí temperaturas independientes por ambiente para equilibrar confort y consumo energético.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Programación inteligente</div>
-      <p class="feature-body">Define horarios de climatización según tu rutina diaria. El sistema aprende tus preferencias y optimiza automáticamente el consumo energético.</p>
+      <div class="feature-title">Control remoto real</div>
+      <p class="feature-body">Desde app, teclados multifunción, remotos y pantallas táctiles, con lectura de sensores de temperatura y humedad.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Integración HVAC completa</div>
-      <p class="feature-body">Compatible con sistemas de aire acondicionado central, radiadores, suelo radiante, VRF y bombas de calor. Protocolo BACnet, Modbus y más.</p>
+      <div class="feature-title">Termostato oculto, control visible</div>
+      <p class="feature-body">El equipo puede ubicarse en áreas técnicas y operar de forma remota sin afectar la estética de los espacios principales.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Pantalla táctil premium</div>
-      <p class="feature-body">Display de alta resolución con interfaz intuitiva. Muestra temperatura ambiente, humedad, calidad del aire y pronóstico del tiempo en tiempo real.</p>
+      <div class="feature-title">Compatibilidad HVAC</div>
+      <p class="feature-body">Crestron Home funciona con la mayoría de sistemas HVAC populares, facilitando integración en proyectos diversos.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Ahorro energético</div>
-      <p class="feature-body">El modo "ausente" ajusta automáticamente las temperaturas cuando detecta que no hay nadie en casa. Ahorra hasta un 20% en tu factura energética.</p>
+      <div class="feature-title">Interfaz elegante</div>
+      <p class="feature-body">La línea Horizon aporta una presencia sobria y contemporánea que dialoga con interiores de alto estándar.</p>
     </div>
     <div class="feature-item">
-      <div class="feature-title">Coordinación total</div>
-      <p class="feature-body">Las escenas de Crestron Home coordinan el termostato con las persianas y la ventilación para maximizar el confort con el mínimo consumo.</p>
+      <div class="feature-title">Eficiencia automática</div>
+      <p class="feature-body">Escenas y rutinas reducen picos de consumo sin resignar comodidad en momentos clave del día.</p>
+    </div>
+  </div>
+</section>
+
+<section class="clima-weekly" id="termostatos-lab" aria-labelledby="termostatos-lab-title">
+  <div class="clima-weekly__inner">
+    <p class="clima-weekly__kicker">Interactivo Crestron</p>
+    <h2 id="termostatos-lab-title">Programador térmico semanal</h2>
+    <p class="clima-weekly__lead">Elegí un día y visualizá sus consignas para mañana, tarde y noche. Ideal para definir confort sin sobreconsumo.</p>
+    <div class="clima-weekly__sim" aria-live="polite" aria-atomic="true">
+      <div class="clima-thermostat" role="group" aria-label="Termostato simulado">
+        <p class="clima-thermostat__label">Setpoint actual</p>
+        <div class="clima-thermostat__dial">
+          <span id="climaDialTemp">22°</span>
+        </div>
+        <div class="clima-thermostat__controls">
+          <button type="button" class="clima-adjust-btn" id="climaTempDown" aria-label="Bajar temperatura">−</button>
+          <button type="button" class="clima-adjust-btn" id="climaTempUp" aria-label="Subir temperatura">+</button>
+        </div>
+      </div>
+      <div class="clima-thermostat__meta">
+        <strong id="climaTargetLabel">Confort equilibrado</strong>
+        <span id="climaTargetHint">Objetivo recomendado para el día seleccionado.</span>
+      </div>
+    </div>
+    <div class="clima-weekly__days" role="group" aria-label="Días">
+      <button type="button" class="clima-day-btn is-active" data-clima-day="lun">Lun</button>
+      <button type="button" class="clima-day-btn" data-clima-day="mar">Mar</button>
+      <button type="button" class="clima-day-btn" data-clima-day="mie">Mié</button>
+      <button type="button" class="clima-day-btn" data-clima-day="jue">Jue</button>
+      <button type="button" class="clima-day-btn" data-clima-day="vie">Vie</button>
+      <button type="button" class="clima-day-btn" data-clima-day="sab">Sáb</button>
+      <button type="button" class="clima-day-btn" data-clima-day="dom">Dom</button>
+    </div>
+    <div class="clima-weekly__slots" aria-live="polite" aria-atomic="true">
+      <article><h3>Mañana</h3><p id="climaSlotMorning">21° · 06:30–10:00</p></article>
+      <article><h3>Tarde</h3><p id="climaSlotNoon">20° · 10:00–18:30</p></article>
+      <article><h3>Noche</h3><p id="climaSlotNight">19° · 18:30–23:30</p></article>
     </div>
   </div>
 </section>
 
 <img class="fullwidth-image"
-     src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/thermostat-room.jpg"
-     alt="Habitación con climatización Crestron"
+     src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-thermostats-controlled-remotely.jpg"
+     alt="Control remoto de climatización en entorno residencial"
+     width="1600" height="800" loading="lazy" decoding="async"
      onerror="this.style.background='#BBBBBB';this.removeAttribute('src')">
 
-<!-- PRODUCTS -->
-<section class="products-section" id="productos">
-  <div class="products-header">
-    <h2>Termostatos Crestron Home</h2>
-  </div>
-
-  <p class="product-category-label">Termostatos con Pantalla Táctil</p>
-  <div class="product-cards-row">
-    <a href="https://www.crestron.com/Products/Control-Surfaces/Thermostats" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/tstat10.jpg"
-           alt="TSTAT10"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">TSTAT10</div>
-        <div class="product-card-desc">Termostato de 10 pulgadas con pantalla táctil full HD. Muestra temperatura, humedad, calidad del aire y control total de Crestron Home.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-    <a href="https://www.crestron.com/Products/Control-Surfaces/Thermostats" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/tstat8.jpg"
-           alt="TSTAT8"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">TSTAT8</div>
-        <div class="product-card-desc">Termostato de 8 pulgadas con control de iluminación, clima y audio integrados. Diseño elegante en acabado blanco o negro.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-    <a href="https://www.crestron.com/Products/Control-Surfaces/Thermostats" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/tstat-uio.jpg"
-           alt="TSTAT-UIO"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">TSTAT-UIO</div>
-        <div class="product-card-desc">Termostato con entradas/salidas universales para integración con sistemas HVAC de terceros. Protocolo BACnet y Modbus.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-  </div>
-
-  <p class="product-category-label">Sensores de Temperatura y Calidad del Aire</p>
-  <div class="product-cards-row">
-    <a href="https://www.crestron.com/Products/Control-Hardware-Software/Hardware/Sensors" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/cts-sensor.jpg"
-           alt="CTS Sensor"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">CTS-TH-CRESNET</div>
-        <div class="product-card-desc">Sensor de temperatura y humedad para monitoreo preciso de cada zona. Integración directa con Cresnet.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-    <a href="https://www.crestron.com/Products/Control-Hardware-Software/Hardware/Sensors" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/iaq-sensor.jpg"
-           alt="IAQ Sensor"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">CEN-IAQ-SENSOR</div>
-        <div class="product-card-desc">Sensor de calidad del aire interior (CO2, VOC, PM2.5). Activa la ventilación automáticamente cuando detecta contaminantes.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-  </div>
+<section class="shading-fullbleed-caption" aria-labelledby="clima-hvac-title">
+  <h2 id="clima-hvac-title">Compatible con los sistemas HVAC más usados</h2>
+  <p>Crestron Home se integra con gran parte del ecosistema HVAC residencial para ofrecer una experiencia unificada entre climatización, iluminación, persianas y automatización.</p>
 </section>
+
+<img class="fullwidth-image"
+     src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-thermostats-crestron-home.jpg"
+     alt="Termostato Horizon integrado con Crestron Home"
+     width="1600" height="808" loading="lazy" decoding="async"
+     onerror="this.style.background='#BBBBBB';this.removeAttribute('src')">
 
 <!-- DISCOVER MORE -->
 <section class="discover-section">
@@ -193,13 +211,13 @@
   <div class="discover-slider-wrapper">
     <div class="discover-slider" id="discoverSlider">
       <a href="iluminacion.html" class="discover-card"><div class="discover-card-name">Iluminación</div><div class="discover-card-cta">Explorar →</div></a>
-      <a href="persianas.html" class="discover-card"><div class="discover-card-name">Persianas</div><div class="discover-card-cta">Explorar →</div></a>
+      <a href="persianas.html" class="discover-card"><div class="discover-card-name">Persianas y Estores</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="audio.html" class="discover-card"><div class="discover-card-name">Audio</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="video.html" class="discover-card"><div class="discover-card-name">Video</div><div class="discover-card-cta">Explorar →</div></a>
-      <a href="controladores.html" class="discover-card"><div class="discover-card-name">Controladores</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="acceso-hogar.html" class="discover-card"><div class="discover-card-name">Acceso al Hogar</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="piscina-spa.html" class="discover-card"><div class="discover-card-name">Piscina y Spa</div><div class="discover-card-cta">Explorar →</div></a>
       <a href="salud-bienestar.html" class="discover-card"><div class="discover-card-name">Salud y Bienestar</div><div class="discover-card-cta">Explorar →</div></a>
+      <a href="todo-lo-demas.html" class="discover-card"><div class="discover-card-name">Todo lo Demás</div><div class="discover-card-cta">Explorar →</div></a>
     </div>
     <div class="slider-nav">
       <button class="slider-btn" onclick="slideLeft('discoverSlider')">←</button>
@@ -225,7 +243,7 @@
       <li><a href="iluminacion.html">Iluminación</a></li><li><a href="persianas.html">Persianas y Estores</a></li>
       <li><a href="termostatos.html">Termostatos</a></li><li><a href="acceso-hogar.html">Acceso al Hogar</a></li>
       <li><a href="audio.html">Audio</a></li><li><a href="video.html">Video</a></li>
-      <li><a href="controladores.html">Controladores</a></li><li><a href="piscina-spa.html">Piscina y Spa</a></li>
+      <li><a href="piscina-spa.html">Piscina y Spa</a></li>
       <li><a href="salud-bienestar.html">Salud y Bienestar</a></li><li><a href="todo-lo-demas.html">Todo lo Demás</a></li>
     </ul></div>
     <div class="footer-col"><h4>Soporte</h4><ul>
