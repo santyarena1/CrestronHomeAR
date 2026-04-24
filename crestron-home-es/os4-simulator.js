@@ -16,16 +16,11 @@
   updateTime();
   setInterval(updateTime, 15000);
 
-  function syncOs4SiteTheme() {
-    document.body.classList.toggle('os4-site-dark', !app.classList.contains('light'));
-  }
-
   /* ── Theme toggle ── */
   var btnTheme = document.getElementById('os4BtnTheme');
   if (btnTheme) {
     btnTheme.addEventListener('click', function () {
       app.classList.toggle('light');
-      syncOs4SiteTheme();
       var label = btnTheme.querySelector('.os4-btn-label');
       if (label) label.textContent = app.classList.contains('light') ? 'Oscuro' : 'Claro';
     });
@@ -49,12 +44,6 @@
     app.querySelectorAll('.os4-panel').forEach(function (p) {
       p.hidden = (p.id !== id);
     });
-    var activePanel = app.querySelector('#' + id);
-    if (activePanel) {
-      activePanel.querySelectorAll('.os4-panel-scroll').forEach(function (el) {
-        el.scrollTop = 0;
-      });
-    }
     app.querySelectorAll('.os4-nav-tab').forEach(function (t) {
       var tab = t.getAttribute('data-tab');
       var active = (tab === 'home' && id === HOME_PANEL) ||
@@ -166,13 +155,12 @@
     });
   });
 
-  /* ── Scene chips / cards (exclusive per container) ── */
-  app.querySelectorAll('.os4-scenes-row, .os4-scene-cards').forEach(function (row) {
-    row.querySelectorAll('.os4-scene-chip, .os4-scene-card').forEach(function (chip) {
+  /* ── Scene chips (exclusive per row) ── */
+  app.querySelectorAll('.os4-scenes-row').forEach(function (row) {
+    row.querySelectorAll('.os4-scene-chip').forEach(function (chip) {
       chip.addEventListener('click', function () {
-        row.querySelectorAll('.os4-scene-chip, .os4-scene-card').forEach(function (c) {
+        row.querySelectorAll('.os4-scene-chip').forEach(function (c) {
           c.classList.toggle('is-active', c === chip);
-          c.setAttribute('aria-pressed', c === chip ? 'true' : 'false');
         });
       });
     });
@@ -346,29 +334,6 @@
     });
   });
 
-  /* ── Mini player ── */
-  var miniPlayer = document.getElementById('os4MiniPlayer');
-  if (miniPlayer) {
-    miniPlayer.addEventListener('click', function () {
-      showPanel('os4PanelAudio');
-    });
-  }
-
-  /* ── Thermostat inline +/- (on home tile) ── */
-  var thermoDisplay = document.getElementById('os4ThermoSetDisplay');
-  var thermoVal = 21;
-  app.querySelectorAll('.os4-thermo-adj').forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-      e.stopPropagation();
-      var dir = btn.getAttribute('data-dir');
-      thermoVal = Math.min(30, Math.max(16, thermoVal + (dir === 'up' ? 1 : -1)));
-      if (thermoDisplay) thermoDisplay.textContent = thermoVal + '\u00b0';
-      var climateSetpoint = document.getElementById('os4ClimateSetpoint');
-      if (climateSetpoint) climateSetpoint.textContent = thermoVal + '\u00b0';
-    });
-  });
-
   /* ── Init ── */
-  syncOs4SiteTheme();
   showPanel(HOME_PANEL);
 })();
