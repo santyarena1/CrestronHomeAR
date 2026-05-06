@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todo lo Demás — Crestron Home®</title>
-  <meta name="description" content="Crestron Home integra seguridad, energía, garaje, riego y mucho más. Control unificado de todos los sistemas de tu hogar.">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Entretenimiento, iluminación, sombreado y seguridad ya están en Crestron Home OS. Sumá electrodomésticos, riego, estaciones meteorológicas y casi cualquier sistema especializado.">
+  <link rel="stylesheet" href="styles.css?v=everything1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-todo-lo-demas">
 
 <nav class="navbar">
   <div class="navbar-left">
@@ -23,7 +23,11 @@
     <a href="index.html" class="logo">CRESTRON <span>HOME</span>®</a>
   </div>
   <div class="navbar-right">
-    <a href="#">Blog</a><a href="#">Ayuda</a>
+    <a href="https://www.instagram.com/crestronhome" target="_blank" rel="noopener noreferrer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg>
+    </a>
     <button class="btn-download" onclick="window.open('https://apps.apple.com/us/app/crestron-home/id1466827669')">Descargar App</button>
   </div>
 </nav>
@@ -55,213 +59,41 @@
   <span>Todo lo Demás</span>
 </nav>
 
-<!-- HERO -->
-<section class="hero-split">
+<!-- Hero + intro + carrusel — misma estructura que crestron.com Everything Else -->
+<section class="hero-split hero-split--compact">
   <div class="hero-left">
-    <p class="supertitle">Crestron Home® — Todo lo Demás</p>
-    <h1 class="hero-title">Un hogar<br>verdaderamente<br>completo.</h1>
-    <button class="scroll-btn" onclick="document.getElementById('intro').scrollIntoView({behavior:'smooth'})">↓</button>
+    <p class="supertitle">Casos de uso</p>
+    <h1 class="hero-title">Todo lo demás</h1>
+    <button type="button" class="scroll-btn" onclick="document.getElementById('intro').scrollIntoView({behavior:'smooth'})" aria-label="Ir al contenido">↓</button>
   </div>
   <div class="hero-right">
     <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/everything-else-hero.jpg"
-         alt="Hogar completamente automatizado con Crestron"
+         alt="Todo lo demás con Crestron Home"
+         width="1920" height="1080" loading="eager" decoding="async"
          onerror="this.style.background='#CCCCCC';this.removeAttribute('src')">
   </div>
 </section>
 
-<!-- INTRO -->
-<section class="section-intro" id="intro">
-  <div class="section-intro-left">
-    <h2 class="section-title">Si existe<br>en tu hogar,<br>Crestron lo<br>controla.</h2>
-  </div>
-  <div class="section-intro-right">
-    <p class="section-body">La integración de Crestron Home va mucho más allá de la iluminación y el audio. Desde el sistema de seguridad hasta el riego del jardín, desde el cargador de autos eléctricos hasta la chimenea — todo puede integrarse en un único sistema de control.</p>
-    <p class="section-body" style="margin-top:20px">Con más de 6000 drivers de terceros disponibles, prácticamente cualquier dispositivo del hogar puede controlarse desde la app Crestron Home o desde los keypads y pantallas táctiles instalados en las paredes.</p>
-    <a href="#categorias" class="see-products-btn">Ver categorías →</a>
+<section class="everything-intro" id="intro" aria-labelledby="everything-intro-title">
+  <div class="everything-intro__grid">
+    <h2 class="everything-intro__title" id="everything-intro-title">Los sistemas más habituales —entretenimiento, iluminación y sombreado, y seguridad— están integrados directamente en <strong>Crestron Home</strong> OS.</h2>
+    <p class="everything-intro__lede">Además podés sumar casi cualquier sistema o dispositivo especializado que aún no figure en la app, como electrodomésticos de cocina, sistemas de riego y estaciones meteorológicas.</p>
   </div>
 </section>
 
-<!-- CATEGORIES GRID OF EXTRA SYSTEMS -->
-<section class="categories-section" id="categorias">
-  <h2>Sistemas integrados adicionales</h2>
-  <div class="categories-grid">
-    <div class="category-tile" style="cursor:default">
-      <div style="font-size:40px">🔒</div>
-      <div class="category-tile-name">Seguridad y Alarmas</div>
-      <div style="font-size:13px;color:#555;line-height:1.6">Integración con sistemas de alarma DSC, Honeywell, Bosch y más. Control de zonas, armado/desarmado y alertas en tiempo real.</div>
-    </div>
-    <div class="category-tile" style="cursor:default">
-      <div style="font-size:40px">🌿</div>
-      <div class="category-tile-name">Riego Inteligente</div>
-      <div style="font-size:13px;color:#555;line-height:1.6">Control del sistema de riego por zonas. Programación por horario, sensor de lluvia y ajuste según el pronóstico del tiempo.</div>
-    </div>
-    <div class="category-tile" style="cursor:default">
-      <div style="font-size:40px">🚗</div>
-      <div class="category-tile-name">Garaje Motorizado</div>
-      <div style="font-size:13px;color:#555;line-height:1.6">Apertura y cierre de puertas de garaje desde la app. Notificaciones si el garaje queda abierto y acceso para visitas.</div>
-    </div>
-    <div class="category-tile" style="cursor:default">
-      <div style="font-size:40px">⚡</div>
-      <div class="category-tile-name">Energía Solar</div>
-      <div style="font-size:13px;color:#555;line-height:1.6">Monitoreo de producción fotovoltaica, consumo en tiempo real y gestión inteligente de la energía almacenada en baterías.</div>
-    </div>
-    <div class="category-tile" style="cursor:default">
-      <div style="font-size:40px">🔥</div>
-      <div class="category-tile-name">Chimenea y Gas</div>
-      <div style="font-size:13px;color:#555;line-height:1.6">Control de chimeneas a gas, estufas y sistemas de calefacción por zonas. Encendido remoto para llegar siempre a un hogar caliente.</div>
-    </div>
-    <div class="category-tile" style="cursor:default">
-      <div style="font-size:40px">📡</div>
-      <div class="category-tile-name">Red e Internet</div>
-      <div style="font-size:13px;color:#555;line-height:1.6">Gestión de red Wi-Fi, control de ancho de banda por dispositivo y configuración de redes de invitados desde un solo lugar.</div>
-    </div>
-    <div class="category-tile" style="cursor:default">
-      <div style="font-size:40px">🎮</div>
-      <div class="category-tile-name">Entretenimiento</div>
-      <div style="font-size:13px;color:#555;line-height:1.6">Control de consolas de videojuegos, sistemas de karaoke, simuladores y cualquier dispositivo de entretenimiento en el hogar.</div>
-    </div>
-    <div class="category-tile" style="cursor:default">
-      <div style="font-size:40px">🌐</div>
-      <div class="category-tile-name">Asistentes de Voz</div>
-      <div style="font-size:13px;color:#555;line-height:1.6">Integración nativa con Amazon Alexa, Google Home, Apple HomeKit y Siri. Control por voz de cualquier función del hogar.</div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURES -->
-<section class="features-section">
-  <p class="features-section-title">La plataforma de integración más completa del mercado</p>
-  <div class="features-grid">
-    <div class="feature-item">
-      <div class="feature-title">+6000 integraciones</div>
-      <p class="feature-body">Crestron es compatible con más de 6000 dispositivos de terceros. Si existe en el mercado, probablemente podemos integrarlo con Crestron Home.</p>
-    </div>
-    <div class="feature-item">
-      <div class="feature-title">Protocolos universales</div>
-      <p class="feature-body">RS-232, IR, IP, BACnet, Modbus, Z-Wave, Zigbee, KNX, DALI — Crestron Home habla el idioma de cualquier sistema del mercado.</p>
-    </div>
-    <div class="feature-item">
-      <div class="feature-title">Automatizaciones complejas</div>
-      <p class="feature-body">Crea automatizaciones que combinan múltiples sistemas: al llegar a casa se abre el garaje, se encienden las luces, sube la temperatura y empieza tu música.</p>
-    </div>
-    <div class="feature-item">
-      <div class="feature-title">Geofencing inteligente</div>
-      <p class="feature-body">El sistema detecta tu ubicación por GPS y prepara el hogar antes de que llegues. Sale del modo ausente automáticamente cuando estás a 5 minutos.</p>
-    </div>
-    <div class="feature-item">
-      <div class="feature-title">Informes de energía</div>
-      <p class="feature-body">Visualiza el consumo energético de tu hogar en tiempo real, por dispositivo y por zona. Identifica ineficiencias y reduce tu huella ambiental.</p>
-    </div>
-    <div class="feature-item">
-      <div class="feature-title">Respaldo sin red</div>
-      <p class="feature-body">Crestron Home funciona en modo local sin conexión a internet. Todas las funciones críticas están disponibles incluso sin conectividad externa.</p>
-    </div>
-  </div>
-</section>
-
-<img class="fullwidth-image"
-     src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/everything-exterior.jpg"
-     alt="Exterior de residencia con automatización Crestron"
-     onerror="this.style.background='#BBBBBB';this.removeAttribute('src')">
-
-<!-- BILLBOARD -->
-<section class="billboard-half">
-  <div class="billboard-half-img">
-    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/dealer-showroom.jpg"
-         alt="Showroom Crestron con dealer"
-         onerror="this.style.background='#CCCCCC';this.removeAttribute('src')">
-  </div>
-  <div class="billboard-half-text">
-    <p class="supertitle" style="color:rgba(255,255,255,0.4)">Encontrar un Especialista</p>
-    <h2>Diseña tu hogar perfecto con un dealer certificado.</h2>
-    <p>Los integradores certificados Crestron tienen la experiencia y el conocimiento para diseñar e instalar el sistema perfecto para tu hogar. Agenda una consulta gratuita.</p>
-    <a href="#" class="see-products-btn" style="margin-top:32px;color:#fff;border-color:rgba(255,255,255,0.4)">Encontrar un dealer →</a>
-  </div>
-</section>
-
-<!-- PRODUCTS -->
-<section class="products-section" id="productos">
-  <div class="products-header">
-    <h2>Módulos de Integración</h2>
-  </div>
-
-  <p class="product-category-label">Módulos de Control Universal</p>
-  <div class="product-cards-row">
-    <a href="https://www.crestron.com/Products/Control-Hardware-Software" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/clx-1di4ro.jpg"
-           alt="CLX-1DI4RO"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">CLX-1DI4RO</div>
-        <div class="product-card-desc">Módulo de 4 entradas digitales y 4 relés de salida. Para control de puertas de garaje, portones, persianas y cualquier dispositivo con contacto seco.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-    <a href="https://www.crestron.com/Products/Control-Hardware-Software" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/clx-2com8.jpg"
-           alt="CLX-2COM8"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">CLX-2COM8</div>
-        <div class="product-card-desc">Módulo de 8 puertos COM (RS-232/485) para integración con proyectores, pantallas, sistemas de audio y equipos de terceros.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-    <a href="https://www.crestron.com/Products/Control-Hardware-Software" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/clx-8relay.jpg"
-           alt="CLX-8RELAY"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">CLX-8RELAY</div>
-        <div class="product-card-desc">Módulo de 8 relés de alta corriente (20A por canal). Ideal para control de bombas de piscina, sistemas de irrigación y cargas eléctricas pesadas.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-  </div>
-
-  <p class="product-category-label">Integración con Seguridad</p>
-  <div class="product-cards-row">
-    <a href="https://www.crestron.com/Products/Control-Hardware-Software" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/cs-gw-t.jpg"
-           alt="CS-GW-T"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">CS-GW-T Security Gateway</div>
-        <div class="product-card-desc">Gateway para integración de paneles de alarma DSC, Honeywell, Bosch y otros. Recibe el estado de zonas y controla el armado/desarmado.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-    <a href="https://www.crestron.com/Products/Control-Hardware-Software" target="_blank" class="product-card">
-      <img class="product-card-img"
-           src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/products/cen-rfgwex.jpg"
-           alt="CEN-RFGWEX"
-           onerror="this.style.background='#F5F5F5';this.removeAttribute('src')">
-      <div class="product-card-body">
-        <div class="product-card-name">CEN-RFGWEX</div>
-        <div class="product-card-desc">Gateway de RF para comunicación inalámbrica con dispositivos Z-Wave y Zigbee. Integra cerraduras, sensores y dispositivos IoT.</div>
-        <div class="product-card-cta">Ver más →</div>
-      </div>
-    </a>
-  </div>
-</section>
-
-<!-- DISCOVER MORE -->
-<section class="discover-section">
-  <h2>Descubrir más categorías</h2>
+<section class="discover-section" aria-label="Descubrir más productos">
+  <h2>Descubrir más productos Crestron Home</h2>
   <div class="discover-slider-wrapper">
     <div class="discover-slider" id="discoverSlider">
-      <a href="iluminacion.html" class="discover-card"><div class="discover-card-name">Iluminación</div><div class="discover-card-cta">Explorar →</div></a>
-      <a href="persianas.html" class="discover-card"><div class="discover-card-name">Persianas</div><div class="discover-card-cta">Explorar →</div></a>
-      <a href="termostatos.html" class="discover-card"><div class="discover-card-name">Termostatos</div><div class="discover-card-cta">Explorar →</div></a>
-      <a href="audio.html" class="discover-card"><div class="discover-card-name">Audio</div><div class="discover-card-cta">Explorar →</div></a>
-      <a href="video.html" class="discover-card"><div class="discover-card-name">Video</div><div class="discover-card-cta">Explorar →</div></a>
-      <a href="piscina-spa.html" class="discover-card"><div class="discover-card-name">Piscina y Spa</div><div class="discover-card-cta">Explorar →</div></a>
-      <a href="salud-bienestar.html" class="discover-card"><div class="discover-card-name">Salud y Bienestar</div><div class="discover-card-cta">Explorar →</div></a>
-      <a href="acceso-hogar.html" class="discover-card"><div class="discover-card-name">Acceso al Hogar</div><div class="discover-card-cta">Explorar →</div></a>
+      <a href="iluminacion.html" class="discover-card discover-card--icon"><div class="discover-card-name">Iluminación</div><img class="discover-card-icon" src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/icon2_lighting.svg" alt="" width="72" height="72" loading="lazy" decoding="async"><div class="discover-card-cta">Ver todo →</div></a>
+      <a href="persianas.html" class="discover-card discover-card--icon"><div class="discover-card-name">Persianas</div><img class="discover-card-icon" src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/icon2_shading.svg" alt="" width="72" height="72" loading="lazy" decoding="async"><div class="discover-card-cta">Ver todo →</div></a>
+      <a href="termostatos.html" class="discover-card discover-card--icon"><div class="discover-card-name">Termostatos</div><img class="discover-card-icon" src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/icon2_thermostats.svg" alt="" width="72" height="72" loading="lazy" decoding="async"><div class="discover-card-cta">Ver todo →</div></a>
+      <a href="acceso-hogar.html" class="discover-card discover-card--icon"><div class="discover-card-name">Acceso al hogar</div><img class="discover-card-icon" src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/icon2_locks.svg" alt="" width="72" height="72" loading="lazy" decoding="async"><div class="discover-card-cta">Ver todo →</div></a>
+      <a href="audio.html" class="discover-card discover-card--icon"><div class="discover-card-name">Audio</div><img class="discover-card-icon" src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/icon2_audio.svg" alt="" width="72" height="72" loading="lazy" decoding="async"><div class="discover-card-cta">Ver todo →</div></a>
+      <a href="video.html" class="discover-card discover-card--icon"><div class="discover-card-name">Video</div><img class="discover-card-icon" src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/icon2_video.svg" alt="" width="72" height="72" loading="lazy" decoding="async"><div class="discover-card-cta">Ver todo →</div></a>
+      <a href="horizon.html" class="discover-card discover-card--icon"><div class="discover-card-name">Controladores</div><img class="discover-card-icon" src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/icon2_control_systems.svg" alt="" width="72" height="72" loading="lazy" decoding="async"><div class="discover-card-cta">Ver todo →</div></a>
+      <a href="piscina-spa.html" class="discover-card discover-card--icon"><div class="discover-card-name">Piscina / Spa</div><img class="discover-card-icon" src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/icon2_pools.svg" alt="" width="72" height="72" loading="lazy" decoding="async"><div class="discover-card-cta">Ver todo →</div></a>
+      <a href="salud-bienestar.html" class="discover-card discover-card--icon"><div class="discover-card-name">Salud y Bienestar</div><img class="discover-card-icon" src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/product-health.svg" alt="" width="72" height="72" loading="lazy" decoding="async"><div class="discover-card-cta">Ver todo →</div></a>
     </div>
     <div class="slider-nav">
       <button class="slider-btn" onclick="slideLeft('discoverSlider')">←</button>
@@ -270,14 +102,21 @@
   </div>
 </section>
 
-<section class="app-cta">
+<section class="app-cta app-cta--everything" aria-labelledby="everything-app-cta-title">
   <div class="app-cta-text">
-    <h3>Todo tu hogar. Una sola app.</h3>
-    <p>La app Crestron Home es gratuita. Disponible en iOS y Android.</p>
+    <h3 id="everything-app-cta-title">Descargá la app Crestron <span>Home</span>® para tus dispositivos.</h3>
+    <p>La app es gratuita. Disponible en iOS y Android.</p>
     <div class="app-badges">
-      <a href="https://apps.apple.com/us/app/crestron-home/id1466827669" target="_blank" class="app-badge">🍎 App Store</a>
-      <a href="https://play.google.com/store/apps/details?id=com.crestron.crestronhome" target="_blank" class="app-badge">▶ Google Play</a>
+      <a href="https://apps.apple.com/us/app/crestron-home/id1466827669" target="_blank" rel="noopener noreferrer" class="app-badge">🍎 App Store</a>
+      <a href="https://play.google.com/store/apps/details?id=com.crestron.crestronhome" target="_blank" rel="noopener noreferrer" class="app-badge">▶ Google Play</a>
     </div>
+    <p class="app-cta-footnote">*Modo demo disponible solo en iOS; en Android se requiere sistema instalado.</p>
+  </div>
+  <div class="app-cta-media">
+    <img src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/call-to-action2.png"
+         alt="Smartphones con la app Crestron Home"
+         width="960" height="1200" loading="lazy" decoding="async"
+         onerror="this.parentElement.style.background='#b8b8be';this.removeAttribute('src')">
   </div>
 </section>
 
@@ -304,7 +143,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2024 Crestron Electronics, Inc. Todos los derechos reservados.</p>
+    <p>© 2026 Soundtec SRL. Todos los derechos reservados.</p>
     <div class="footer-links"><a href="#">Privacidad</a><a href="#">Términos de Uso</a><a href="#">Accesibilidad</a></div>
   </div>
 </footer>

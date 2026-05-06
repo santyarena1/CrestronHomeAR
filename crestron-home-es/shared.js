@@ -18,6 +18,15 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeMenu();
 });
 
+/** Reserva altura del titular con efecto máquina de escribir (frase más larga en span invisible). */
+function syncHeroTypingMeasure(wrap, phrases) {
+  if (!wrap || !phrases || !phrases.length) return;
+  const measure = wrap.querySelector('.hero-typed-measure');
+  if (!measure) return;
+  const longest = phrases.reduce((a, b) => (String(b).length > String(a).length ? b : a));
+  measure.textContent = longest;
+}
+
 /** Titular del home con rotación tipo máquina de escribir (index.html) */
 function initHomeHeroHeadlineRotator() {
   const el = document.getElementById('homeHeroTypedText');
@@ -30,6 +39,8 @@ function initHomeHeroHeadlineRotator() {
     'Descubrí la experiencia Crestron Home OS',
     'Tu casa inteligente comienza con Crestron Home OS',
   ];
+
+  syncHeroTypingMeasure(wrap, items);
 
   const escapeHtml = (value) => value
     .replaceAll('&', '&amp;')
@@ -103,6 +114,8 @@ function initPersianasHeroHeadlineRotator() {
     'Cada apertura, un gesto de arquitectura.',
   ];
 
+  syncHeroTypingMeasure(wrap, items);
+
   const escapeHtml = (value) => value
     .replaceAll('&', '&amp;')
     .replaceAll('<', '&lt;')
@@ -174,6 +187,8 @@ function initTermostatosHeroHeadlineRotator() {
     'Termostatos que entienden tu rutina.',
     'Clima preciso para una casa en equilibrio.',
   ];
+
+  syncHeroTypingMeasure(wrap, items);
 
   const escapeHtml = (value) => value
     .replaceAll('&', '&amp;')
@@ -247,6 +262,8 @@ function initAccesoHeroHeadlineRotator() {
     'Controlá el umbral de tu casa con precisión.',
   ];
 
+  syncHeroTypingMeasure(wrap, items);
+
   const escapeHtml = (value) => value
     .replaceAll('&', '&amp;')
     .replaceAll('<', '&lt;')
@@ -318,6 +335,8 @@ function initAudioHeroHeadlineRotator() {
     'Escenas de audio con precisión arquitectónica.',
     'Control total, sin fricción técnica.',
   ];
+
+  syncHeroTypingMeasure(wrap, items);
 
   const escapeHtml = (value) => value
     .replaceAll('&', '&amp;')
@@ -751,6 +770,8 @@ function initVideoHeroHeadlineRotator() {
     'Una sola plataforma para todo el ecosistema visual.',
     'Controlá cada fuente con precisión instantánea.',
   ];
+
+  syncHeroTypingMeasure(wrap, items);
 
   const escapeHtml = (value) => value
     .replaceAll('&', '&amp;')
