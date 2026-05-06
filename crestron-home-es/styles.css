@@ -5200,6 +5200,29 @@ footer {
   .page-os4 .home-hero.home-hero--os4 {
     min-height: var(--site-hero-min-height-mobile);
   }
+  .page-os4 .os4-band {
+    padding: clamp(48px, 10vw, 68px) 20px;
+  }
+  .page-os4 .os4-band--tight {
+    padding-top: clamp(40px, 8vw, 56px);
+  }
+  .page-os4 .os4-two-col,
+  .page-os4 .os4-feature-grid {
+    gap: 14px;
+    margin-bottom: 26px;
+  }
+  .page-os4 .os4-card {
+    border-radius: 14px;
+    padding: 22px 18px 24px;
+  }
+  .page-os4 .os4-card h3 {
+    font-size: clamp(1.02rem, 4.35vw, 1.18rem);
+    margin-bottom: 10px;
+  }
+  .page-os4 .os4-card p {
+    font-size: clamp(14.5px, 3.95vw, 16px);
+    line-height: 1.62;
+  }
   .page-os4 .fullwidth-video.fullwidth-video--os4-flow {
     overflow: visible;
   }
