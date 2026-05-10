@@ -4115,8 +4115,6 @@ footer {
   text-decoration: none; color: #0A0A0A;
   width: fit-content;
 }
-.footer-social { display: flex; gap: 16px; margin-top: 20px; }
-.footer-social a { font-size: 18px; color: #0A0A0A; text-decoration: none; }
 .footer-brand-block {
   background: #2d2d2d;
   width: 100vw;
