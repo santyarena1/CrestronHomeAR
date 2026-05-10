@@ -13,12 +13,12 @@
 
 <nav class="navbar">
   <div class="navbar-left">
-    <button class="menu-btn" onclick="openMenu()">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <button class="menu-btn" type="button" onclick="openMenu()" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
         <rect x="3" y="6" width="6" height="6"/><rect x="11" y="6" width="6" height="6"/>
         <rect x="3" y="14" width="6" height="6"/><rect x="11" y="14" width="6" height="6"/>
       </svg>
-      MENÚ
+      <span class="menu-btn__label">MENÚ</span>
     </button>
     <a href="index.html" class="logo">CRESTRON <span>HOME</span>®</a>
   </div>
@@ -316,10 +316,13 @@
         <p class="footer-brand__line"><span class="footer-brand__dot" aria-hidden="true"></span> CANNING <span class="footer-brand__dot" aria-hidden="true"></span></p>
       </div>
     </div>
+    <div class="footer-argentina" aria-label="Crestron Home Argentina">
+      <p class="footer-argentina__title">CRESTRON HOME ARGENTINA</p>
+      <p class="footer-argentina__addr">Av. Donato Álvarez 1526, C1416 CABA, Argentina</p>
+    </div>
   </div>
   <div class="footer-bottom">
     <p>© 2026 Soundtec SRL. Todos los derechos reservados.</p>
-    <div class="footer-links"><a href="#">Privacidad</a><a href="#">Términos de Uso</a><a href="#">Accesibilidad</a></div>
   </div>
 </footer>
 
