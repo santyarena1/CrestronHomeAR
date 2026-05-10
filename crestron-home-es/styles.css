@@ -4226,8 +4226,8 @@ footer {
   padding-top: 64px;
 }
 .home-hero.home-hero--os4 {
-  /* Sin padding-top extra: el breadcrumb ya deja lugar bajo la navbar (evita franja blanca enorme) */
-  padding-top: 0;
+  /* Espacio bajo la navbar fija (antes lo ocupaba el breadcrumb del inicio) */
+  padding-top: 64px;
   min-height: var(--site-hero-min-height);
 }
 .home-hero--os4 {
@@ -4781,6 +4781,11 @@ footer {
     padding-bottom: 0;
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .btn-download {
+    font-size: 11px;
+    padding: 8px 17px;
+    border-radius: 3px;
   }
   .hero-right, .wellness-right, .security-right,
   .comfort-bg, .convenience-right, .billboard-half-img {
