@@ -18,6 +18,37 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeMenu();
 });
 
+/** Formulario de contacto (index): envío vía FormSubmit + pantalla de gracias al volver con ?enviado=1 */
+function initSiteContact() {
+  const nextEl = document.getElementById('contacto-next-url');
+  if (nextEl) {
+    try {
+      const u = new URL(window.location.href);
+      u.searchParams.set('enviado', '1');
+      u.hash = '#contacto';
+      nextEl.value = u.toString();
+    } catch (_) {
+      nextEl.value = `${window.location.pathname}?enviado=1#contacto`;
+    }
+  }
+
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('enviado') !== '1') return;
+
+  const thanks = document.getElementById('contacto-gracias');
+  const form = document.getElementById('contacto-form');
+  const lead = document.querySelector('#contacto .site-contact-lead');
+  const title = document.getElementById('contacto-title');
+  if (thanks) thanks.hidden = false;
+  if (form) form.hidden = true;
+  if (lead) lead.hidden = true;
+  if (title) title.hidden = true;
+
+  requestAnimationFrame(() => {
+    document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+}
+
 /** Reserva altura del titular con efecto máquina de escribir (frase más larga en span invisible). */
 function syncHeroTypingMeasure(wrap, phrases) {
   if (!wrap || !phrases || !phrases.length) return;
@@ -1214,6 +1245,7 @@ function initCameoConfigHighlightRotator() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  initSiteContact();
   initHomeHeroHeadlineRotator();
   initPersianasHeroHeadlineRotator();
   initTermostatosHeroHeadlineRotator();

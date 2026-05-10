@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body class="page-os4">
+<body class="page-os4" id="top">
 
 <nav class="navbar">
   <div class="navbar-left">
@@ -67,13 +67,6 @@
       <li><a href="#">Soporte Técnico</a></li>
       <li><a href="#">Documentación</a></li>
       <li><a href="#">Actualizaciones de Software</a></li>
-    </ul>
-  </div>
-  <div class="menu-section menu-section--secondary">
-    <h4>Aplicación</h4>
-    <ul>
-      <li><a href="https://apps.apple.com/us/app/crestron-home/id1466827669" target="_blank" rel="noopener noreferrer">App Store</a></li>
-      <li><a href="https://play.google.com/store/apps/details?id=com.crestron.crestronhome" target="_blank" rel="noopener noreferrer">Google Play</a></li>
     </ul>
   </div>
 </div>
@@ -237,26 +230,7 @@
     <h2 id="os4-why-title">¿Por qué Crestron Home?</h2>
     <p>Hay una razón sencilla por la que Crestron es referente en la industria del hogar inteligente: la experiencia increíblemente sencilla que disfrutás en un hogar Crestron.</p>
     <p>Solo Crestron unifica todos los sistemas y dispositivos de tu hogar en un sistema inteligente coherente, lo que garantiza facilidad de control y un rendimiento y una confiabilidad incomparables para vos y tu familia.</p>
-    <p class="os4-closing-note">Crestron Home® OS 4 concentra esa filosofía en una interfaz actual, potente y pensada para durar. Para conocer soluciones, integraciones y un despliegue profesional, podés contactarnos directamente o coordinar con uno de nuestros integradores autorizados.</p>
-  </div>
-</section>
-
-<section class="os4-cta-final" aria-labelledby="os4-wait-title">
-  <div class="os4-cta-final-inner">
-    <h2 id="os4-wait-title">¿Qué esperás?</h2>
-    <p>Contáctanos hoy y conocé todas nuestras soluciones.</p>
-    <div class="os4-cta-final-btns">
-      <a href="https://www.crestronlatin.com" class="see-products-btn os4-cta-final-primary" rel="noopener noreferrer">Contactar — Crestron Latin →</a>
-      <a href="#" class="see-products-btn os4-cta-final-secondary">Subir arriba</a>
-    </div>
-  </div>
-</section>
-<!-- TESTIMONIAL -->
-<section class="testimonial-section">
-  <p class="testimonial-quote">"Crestron Home transformó nuestra casa en un lugar donde todo funciona como debería — de forma intuitiva, confiable y elegante."</p>
-  <div class="testimonial-author">
-    <div class="testimonial-author-name">Martín R.</div>
-    <div class="testimonial-author-role">Propietario, Buenos Aires</div>
+    <p class="os4-closing-note">Crestron Home® OS 4 concentra esa filosofía en una interfaz actual, potente y pensada para durar. Para conocer soluciones, integraciones y un despliegue profesional, podés <a href="#contacto">contactarnos directamente</a> o coordinar con uno de nuestros integradores autorizados.</p>
   </div>
 </section>
 
@@ -265,19 +239,45 @@
   <div class="app-cta-text">
     <h3>Controlá tu hogar desde el bolsillo.</h3>
     <p>La app Crestron Home es gratuita. Descargala en iOS y en Android.</p>
-    <div class="app-badges">
-      <a href="https://apps.apple.com/us/app/crestron-home/id1466827669" target="_blank" class="app-badge">
-        🍎 App Store
-      </a>
-      <a href="https://play.google.com/store/apps/details?id=com.crestron.crestronhome" target="_blank" class="app-badge">
-        ▶ Google Play
-      </a>
-    </div>
   </div>
   <img class="app-cta-image"
        src="https://kenticoprod.azureedge.net/kenticoblob/crestron/media/crestron/generalsiteimages/residential_enduser_new/app-phone-mockup.png"
        alt="App Crestron Home en iPhone"
        onerror="this.style.display='none'">
+</section>
+
+<section class="site-contact" id="contacto" aria-labelledby="contacto-title">
+  <div class="site-contact-inner">
+    <h2 id="contacto-title">¿Cómo podemos ayudarte?</h2>
+    <p class="site-contact-lead">Completá el formulario y dejános tu consulta. Un asesor comercial se comunicará con vos a la brevedad.</p>
+
+    <div id="contacto-gracias" class="site-contact-thanks" hidden role="status">
+      <p class="site-contact-thanks__title">¡Gracias!</p>
+      <p class="site-contact-thanks__text">Tu consulta fue enviada correctamente. El equipo comercial la va a revisar y te va a responder a la brevedad.</p>
+    </div>
+
+    <form
+      class="site-contact-form"
+      id="contacto-form"
+      action="https://formsubmit.co/comercial@soundtec.com.ar"
+      method="POST"
+      accept-charset="UTF-8"
+    >
+      <input type="hidden" name="_subject" value="Consulta web — Crestron Home (Soundtec)">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" id="contacto-next-url" value="">
+      <input type="text" name="_honey" class="site-contact-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="sr-only" for="contacto-nombre">Nombre y Apellido</label>
+      <input id="contacto-nombre" name="nombre" type="text" placeholder="Nombre y Apellido" autocomplete="name" required>
+      <label class="sr-only" for="contacto-telefono">Cel. o Tel.</label>
+      <input id="contacto-telefono" name="telefono" type="tel" placeholder="Cel. o Tel." autocomplete="tel">
+      <label class="sr-only" for="contacto-email">e-mail</label>
+      <input id="contacto-email" name="email" type="email" placeholder="e-mail" autocomplete="email" required>
+      <label class="sr-only" for="contacto-mensaje">Consulta</label>
+      <textarea id="contacto-mensaje" name="mensaje" placeholder="Consulta" required></textarea>
+      <button type="submit" class="site-contact-submit">ENVIAR</button>
+    </form>
+  </div>
 </section>
 
 <!-- FOOTER -->
@@ -298,35 +298,24 @@
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Soporte</h4>
-      <ul>
-        <li><a href="#">Encontrar un Dealer</a></li>
-        <li><a href="#">Soporte Técnico</a></li>
-        <li><a href="#">Documentación</a></li>
-        <li><a href="#">Actualizaciones de Software</a></li>
-        <li><a href="#">Preguntas Frecuentes</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Empresa</h4>
-      <ul>
-        <li><a href="#">Acerca de Crestron</a></li>
-        <li><a href="#">Prensa</a></li>
-        <li><a href="#">Carreras</a></li>
-        <li><a href="#">Contacto</a></li>
-        <li><a href="#">Noticias</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>App Móvil</h4>
-      <div class="footer-app-btns">
-        <a href="https://apps.apple.com/us/app/crestron-home/id1466827669" target="_blank" class="footer-app-btn">🍎 App Store</a>
-        <a href="https://play.google.com/store/apps/details?id=com.crestron.crestronhome" target="_blank" class="footer-app-btn">▶ Google Play</a>
-      </div>
+      <h4>Seguinos</h4>
       <div class="footer-social">
         <a href="https://www.instagram.com/crestronhome" target="_blank" title="Instagram">📷</a>
         <a href="https://www.youtube.com/crestron" target="_blank" title="YouTube">▶</a>
         <a href="https://www.facebook.com/Crestron" target="_blank" title="Facebook">f</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-brand-block">
+    <div class="footer-brand footer-brand--dual" aria-label="Crestron Home — Pilar y Canning">
+      <div class="footer-brand__col">
+        <p class="footer-brand__title">CRESTRON <span>HOME</span>®</p>
+        <p class="footer-brand__line"><span class="footer-brand__dot" aria-hidden="true"></span> PILAR <span class="footer-brand__dot" aria-hidden="true"></span></p>
+      </div>
+      <div class="footer-brand__divider" aria-hidden="true"></div>
+      <div class="footer-brand__col">
+        <p class="footer-brand__title">CRESTRON <span>HOME</span>®</p>
+        <p class="footer-brand__line"><span class="footer-brand__dot" aria-hidden="true"></span> CANNING <span class="footer-brand__dot" aria-hidden="true"></span></p>
       </div>
     </div>
   </div>

@@ -3968,6 +3968,117 @@ button.product-card:focus-visible {
 .app-badge:hover { border-color: #fff; }
 .app-cta-image { width: 180px; opacity: 0.9; }
 
+/* ===== CONTACTO (solo inicio; enlazar con index.html#contacto) ===== */
+.site-contact {
+  position: relative;
+  background: #151518;
+  color: #fff;
+  padding: clamp(56px, 10vw, 96px) clamp(24px, 5vw, 48px);
+  scroll-margin-top: 72px;
+}
+.site-contact-inner {
+  max-width: 26rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.site-contact-inner h2 {
+  font-size: clamp(1.35rem, 4vw, 1.65rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+  color: #fff;
+}
+.site-contact-lead {
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 0 28px;
+}
+.site-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  text-align: left;
+}
+.site-contact-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.site-contact-form input,
+.site-contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  padding: 14px 16px;
+  font-size: 15px;
+  font-family: inherit;
+  background: #e4e4e6;
+  color: #1a1a1a;
+}
+.site-contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.site-contact-form input::placeholder,
+.site-contact-form textarea::placeholder {
+  color: #5c5c5c;
+}
+.site-contact-form input:focus,
+.site-contact-form textarea:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.35);
+  outline-offset: 1px;
+}
+.site-contact-submit {
+  align-self: center;
+  margin-top: 8px;
+  min-width: 140px;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: inherit;
+  cursor: pointer;
+  background: #e4e4e6;
+  color: #2a2a2a;
+  transition: background 0.2s, color 0.2s;
+}
+.site-contact-submit:hover {
+  background: #f2f2f4;
+  color: #0a0a0a;
+}
+.site-contact-thanks {
+  padding: 28px 22px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  text-align: center;
+  margin-bottom: 8px;
+}
+.site-contact-thanks__title {
+  font-size: clamp(1.28rem, 3.2vw, 1.55rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+  color: #fff;
+}
+.site-contact-thanks__text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.78);
+}
+
 /* ===== FOOTER ===== */
 footer {
   background: #fff;
@@ -3976,7 +4087,7 @@ footer {
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 40px;
   margin-bottom: 60px;
 }
@@ -4006,6 +4117,98 @@ footer {
 }
 .footer-social { display: flex; gap: 16px; margin-top: 20px; }
 .footer-social a { font-size: 18px; color: #0A0A0A; text-decoration: none; }
+.footer-brand-block {
+  background: #2d2d2d;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: clamp(28px, 5vw, 44px) clamp(20px, 5vw, 80px);
+  margin-bottom: 40px;
+  box-sizing: border-box;
+}
+.footer-brand {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.footer-brand--dual {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.footer-brand__col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 0 clamp(16px, 4vw, 32px);
+}
+.footer-brand__divider {
+  width: 1px;
+  align-self: stretch;
+  min-height: 52px;
+  background: rgba(255, 255, 255, 0.35);
+  flex-shrink: 0;
+}
+.footer-brand__title {
+  font-size: clamp(14px, 2.5vw, 17px);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+  line-height: 1.2;
+}
+.footer-brand__title span {
+  font-weight: 300;
+}
+.footer-brand__line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.35;
+}
+.footer-brand__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #fff;
+  flex-shrink: 0;
+}
+@media (max-width: 560px) {
+  .footer-brand--dual {
+    flex-direction: column;
+    gap: 24px;
+    max-width: 100%;
+  }
+  .footer-brand__divider {
+    width: 100%;
+    height: 1px;
+    min-height: 0;
+    align-self: stretch;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .footer-brand__col {
+    padding: 0 8px;
+  }
+}
 .footer-bottom {
   border-top: 1px solid rgba(0,0,0,0.08);
   padding-top: 32px;
@@ -4373,31 +4576,6 @@ footer {
   object-fit: contain;
 }
 
-/* Testimonial */
-.testimonial-section {
-  background: var(--gray-bg);
-  padding: 100px 80px;
-  display: flex; align-items: center; gap: 60px;
-}
-.testimonial-quote {
-  font-size: clamp(20px, 2.5vw, 32px);
-  font-weight: 300; font-style: italic;
-  letter-spacing: -0.02em;
-  line-height: 1.4; flex: 1;
-}
-.testimonial-author {
-  display: flex; flex-direction: column; align-items: center;
-  gap: 12px; min-width: 140px;
-}
-.testimonial-author-name {
-  font-size: 12px; font-weight: 700;
-  text-align: center;
-}
-.testimonial-author-role {
-  font-size: 11px; color: var(--mid-gray);
-  text-align: center;
-}
-
 /* Pool/Spa tabs */
 .use-case-tabs {
   display: flex; gap: 0;
@@ -4724,8 +4902,6 @@ footer {
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
     padding: 40px 32px 48px;
   }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-  .testimonial-section { flex-direction: column; }
   .discover-section, .products-section, .app-cta { padding: 60px 32px; }
   .navbar { padding: 0 20px; }
   .product-row { grid-template-columns: 1fr; }
@@ -4940,50 +5116,6 @@ footer {
   color: rgba(255, 255, 255, 0.78);
   margin: 0;
 }
-.os4-cta-final {
-  background: #fff;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  padding: clamp(56px, 8vw, 96px) clamp(28px, 5vw, 48px);
-  text-align: center;
-}
-.os4-cta-final-inner {
-  max-width: 36rem;
-  margin: 0 auto;
-}
-.os4-cta-final-inner h2 {
-  font-size: clamp(1.65rem, 3vw, 2.25rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  margin-bottom: 12px;
-}
-.os4-cta-final-inner > p {
-  font-size: 17px;
-  line-height: 1.65;
-  color: #444;
-  margin-bottom: 28px;
-}
-.os4-cta-final-btns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  justify-content: center;
-  align-items: center;
-}
-.os4-cta-final-primary {
-  background: #0a0a0a;
-  color: #fff !important;
-  border-color: #0a0a0a !important;
-}
-.os4-cta-final-primary:hover {
-  background: #333 !important;
-  color: #fff !important;
-}
-.os4-cta-final-secondary {
-  margin-top: 0;
-}
-.os4-cta-final-btns .see-products-btn {
-  margin-top: 0;
-}
 .os4-band-inner {
   max-width: 1120px;
   margin: 0 auto;
@@ -5103,6 +5235,31 @@ footer {
   gap: 20px 24px;
   margin-bottom: 40px;
 }
+
+/* Debe ir después de las reglas base anteriores: si no, el grid de 2 columnas
+   anula los @media que están más arriba en el archivo y el texto queda aplastado en móvil. */
+@media (max-width: 1024px) {
+  .os4-band-inner--split {
+    grid-template-columns: 1fr;
+    gap: clamp(28px, 4vw, 48px);
+  }
+  .os4-band-inner--split .os4-media-slot--tall {
+    min-height: 0;
+    order: -1;
+  }
+  .os4-two-col,
+  .os4-two-col--on-dark,
+  .os4-feature-grid {
+    grid-template-columns: 1fr;
+  }
+  .os4-two-col--on-dark .os4-card:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+  .os4-card--tall {
+    min-height: 0;
+  }
+}
+
 .os4-improvements {
   background: #fafafa;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
@@ -5183,6 +5340,14 @@ footer {
   margin-top: 20px;
   color: rgba(255, 255, 255, 0.65) !important;
   font-size: 15px !important;
+}
+.os4-closing-note a {
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.os4-closing-note a:hover {
+  color: #fff;
 }
 .os4-closing-btn {
   margin-top: 32px;
