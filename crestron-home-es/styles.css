@@ -4933,7 +4933,19 @@ footer {
     padding: 40px 32px 48px;
   }
   .discover-section, .products-section, .app-cta { padding: 60px 32px; }
-  .navbar { padding: 0 20px; }
+  /* Sin space-between: el botón queda junto al logo (evita hueco en el medio en móvil) */
+  .navbar {
+    padding: 0 20px;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .navbar-left {
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+  .navbar-right {
+    flex-shrink: 0;
+  }
   .product-row { grid-template-columns: 1fr; }
   .navbar-right a:not(:last-child) { display: none; }
   .categories-grid { grid-template-columns: repeat(2, 1fr); }
@@ -5456,10 +5468,6 @@ footer {
   .navbar-left {
     gap: 8px;
     min-width: 0;
-    flex: 1;
-  }
-  .navbar-right {
-    flex-shrink: 0;
   }
   .menu-btn__label {
     display: none;
